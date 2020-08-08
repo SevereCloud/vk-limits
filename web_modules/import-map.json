@@ -1,0 +1,11 @@
+{
+  "imports": {
+    "@vkontakte/icons/dist/28/moon_outline": "./@vkontakte/icons/dist/28/moon_outline.js",
+    "@vkontakte/icons/dist/28/name_tag_outline": "./@vkontakte/icons/dist/28/name_tag_outline.js",
+    "@vkontakte/icons/dist/28/user_outline": "./@vkontakte/icons/dist/28/user_outline.js",
+    "@vkontakte/vkui": "./@vkontakte/vkui.js",
+    "@vkontakte/vkui/dist/vkui.css": "./@vkontakte/vkui/dist/vkui.css",
+    "react": "./react.js",
+    "react-dom": "./react-dom.js"
+  }
+}
