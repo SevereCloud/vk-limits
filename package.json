@@ -1,0 +1,28 @@
+{
+  "scripts": {
+    "start": "snowpack dev",
+    "tunnel": "vk-tunnel",
+    "build": "snowpack build",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "lint": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@snowpack/app-scripts-react": "^1.1.0",
+    "@snowpack/plugin-webpack": "^1.1.0",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@vkontakte/vk-tunnel": "^0.0.12",
+    "prettier": "^2.0.0",
+    "snowpack": "^2.2.1",
+    "typescript": "^3.9.0"
+  },
+  "dependencies": {
+    "@vkontakte/icons": "^1.23.0",
+    "@vkontakte/vk-bridge": "^2.2.2",
+    "@vkontakte/vkui": "^3.10.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  }
+}

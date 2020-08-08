@@ -1,0 +1,11 @@
+{
+  "extends": "@snowpack/app-scripts-react",
+  "scripts": {},
+  "devOptions": {
+    "port": 10888
+  },
+  "proxy": {
+    "/api": "localhost:8080/api"
+  },
+  "plugins": [["@snowpack/plugin-webpack", {"sourceMap": false}]]
+}
