@@ -4,5 +4,15 @@
   "devOptions": {
     "port": 10888
   },
-  "plugins": [["@snowpack/plugin-webpack", {"sourceMap": false}]]
+  "buildOptions": {
+    "baseUrl": "."
+  },
+  "plugins": [
+    [
+      "@snowpack/plugin-webpack",
+      {
+        "sourceMap": false
+      }
+    ]
+  ]
 }
