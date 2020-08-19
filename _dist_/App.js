@@ -1,1 +1,111 @@
-import*as b from"../web_modules/react.js";import{Panel as i,PanelHeader as j,Header as k,Group as l,Search as m,PanelHeaderButton as h,SimpleCell as n}from"../web_modules/@vkontakte/vkui.js";import"../web_modules/@vkontakte/vkui/dist/vkui.css.proxy.js";import{data as o}from"./data.js";import p from"../web_modules/@vkontakte/icons/dist/28/moon_outline.js";import q from"./icons/IconGitHub.js";export class App extends b.Component{constructor(a){super(a);this.state={activeView:"main",activePanel:"main",scheme:"bright_light",search:""},this.onChange=this.onChange.bind(this),this.changeScheme=this.changeScheme.bind(this)}onChange(a){this.setState({search:a.target.value})}get limits(){const a=this.state.search.toLowerCase(),e=[];return o.forEach(c=>{if(c.name.toLowerCase().indexOf(a)>-1)e.push(c);else{const f=[];c.items.forEach(g=>{(g.name.toLowerCase().indexOf(a)>-1||g.text.toLowerCase().indexOf(a)>-1||g.hint&&g.hint.toLowerCase().indexOf(a)>-1)&&f.push(g)}),f.length>0&&e.push({name:c.name,color:c.color,items:f})}}),e}changeScheme(){const a=this.state.scheme==="bright_light"?"space_gray":"bright_light",e=document.createAttribute("scheme");e.value=a,document.body.attributes.setNamedItem(e),this.setState({scheme:a})}render(){return b.createElement(i,{id:"main"},b.createElement(j,{left:b.createElement(h,{onClick:()=>{this.changeScheme()}},b.createElement(p,{width:24,height:24})),right:b.createElement(h,{onClick:()=>{this.changeScheme()}},b.createElement(q,null))},"Лимиты"),b.createElement(m,{value:this.state.search,onChange:this.onChange,after:null}),this.limits.map((a,e)=>b.createElement(l,{key:e,header:b.createElement(k,{mode:"secondary"},a.name)},a.items.map((c,f)=>b.createElement(n,{key:f,multiline:!0,before:b.createElement(c.icon,{fill:a.color}),description:c.text,href:c.link,target:"_blank"},c.name,c.hint&&b.createElement("span",{style:{color:"var(--text_secondary)"}}," "+c.hint))))))}}
+import * as React from '../web_modules/react.js';
+import { Panel, PanelHeader, Header, Group, Search, PanelHeaderButton, SimpleCell } from '../web_modules/@vkontakte/vkui.js';
+import '../web_modules/@vkontakte/vkui/dist/vkui.css.proxy.js';
+import { data } from './data.js';
+import Icon28MoonOutline from '../web_modules/@vkontakte/icons/dist/28/moon_outline.js';
+import IconGitHub from './icons/IconGitHub.js';
+export class App extends React.Component {
+  constructor(props) {
+    super(props); // TODO: хранить схему в локальном хранилище, чтобы восстанавливать тему
+    // TODO: проверка темной темы у браузера
+
+    this.state = {
+      activeView: 'main',
+      activePanel: 'main',
+      scheme: 'bright_light',
+      search: ''
+    };
+    this.onChange = this.onChange.bind(this);
+    this.changeScheme = this.changeScheme.bind(this);
+  }
+
+  onChange(e) {
+    this.setState({
+      search: e.target.value
+    });
+  }
+
+  get limits() {
+    const search = this.state.search.toLowerCase();
+    const groups = [];
+    data.forEach(group => {
+      if (group.name.toLowerCase().indexOf(search) > -1) {
+        groups.push(group);
+      } else {
+        const items = [];
+        group.items.forEach(item => {
+          if (item.name.toLowerCase().indexOf(search) > -1 || item.text.toLowerCase().indexOf(search) > -1 || item.hint && item.hint.toLowerCase().indexOf(search) > -1) {
+            items.push(item);
+          }
+        });
+
+        if (items.length > 0) {
+          groups.push({
+            name: group.name,
+            color: group.color,
+            items: items
+          });
+        }
+      }
+    });
+    return groups;
+  }
+  /**
+   * Меняет цветовую схему
+   */
+
+
+  changeScheme() {
+    const scheme = this.state.scheme === 'bright_light' ? 'space_gray' : 'bright_light';
+    const schemeAttribute = document.createAttribute('scheme');
+    schemeAttribute.value = scheme;
+    document.body.attributes.setNamedItem(schemeAttribute);
+    this.setState({
+      scheme: scheme
+    }); // TODO: хранить схему в локальном хранилище, чтобы восстанавливать тему
+    // TODO: проверка темной темы у браузера
+  }
+
+  render() {
+    return /*#__PURE__*/React.createElement(Panel, {
+      id: "main"
+    }, /*#__PURE__*/React.createElement(PanelHeader, {
+      left: /*#__PURE__*/React.createElement(PanelHeaderButton, {
+        onClick: () => {
+          this.changeScheme();
+        }
+      }, /*#__PURE__*/React.createElement(Icon28MoonOutline, {
+        width: 24,
+        height: 24
+      })),
+      right: /*#__PURE__*/React.createElement(PanelHeaderButton, {
+        onClick: () => {
+          this.changeScheme();
+        }
+      }, /*#__PURE__*/React.createElement(IconGitHub, null))
+    }, "\u041B\u0438\u043C\u0438\u0442\u044B"), /*#__PURE__*/React.createElement(Search, {
+      value: this.state.search,
+      onChange: this.onChange,
+      after: null
+    }), this.limits.map((group, groupIndex) => /*#__PURE__*/React.createElement(Group, {
+      key: groupIndex,
+      header: /*#__PURE__*/React.createElement(Header, {
+        mode: "secondary"
+      }, group.name)
+    }, group.items.map((item, itemIndex) => /*#__PURE__*/React.createElement(SimpleCell, {
+      key: itemIndex,
+      multiline: true,
+      before: /*#__PURE__*/React.createElement(item.icon, {
+        fill: group.color
+      }),
+      description: item.text,
+      href: item.link,
+      target: "_blank"
+    }, item.name, item.hint && /*#__PURE__*/React.createElement("span", {
+      style: {
+        color: 'var(--text_secondary)'
+      }
+    }, ' ' + item.hint))))));
+  }
+
+}
