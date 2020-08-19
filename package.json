@@ -1,4 +1,5 @@
 {
+  "homepage": "https://severecloud.github.io/vk-limits/",
   "scripts": {
     "start": "snowpack dev",
     "tunnel": "vk-tunnel",
