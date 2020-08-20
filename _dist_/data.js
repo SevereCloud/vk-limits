@@ -11,9 +11,9 @@ import Icon24Crop from '../web_modules/@vkontakte/icons/dist/24/crop.js';
 import Icon24Fullscreen from '../web_modules/@vkontakte/icons/dist/24/fullscreen.js';
 import Icon28MusicOutline from '../web_modules/@vkontakte/icons/dist/28/music_outline.js';
 import Icon28VideocamOutline from '../web_modules/@vkontakte/icons/dist/28/videocam_outline.js';
-import Icon28HistoryForwardOutline from '../web_modules/@vkontakte/icons/dist/28/history_forward_outline.js';
 import Icon28MessageOutline from '../web_modules/@vkontakte/icons/dist/28/message_outline.js';
 import Icon28UsersOutline from '../web_modules/@vkontakte/icons/dist/28/users_outline.js';
+import Icon28RecentOutline from '../web_modules/@vkontakte/icons/dist/28/recent_outline.js';
 
 /**
  * Данные лимитов
@@ -126,7 +126,7 @@ export const data = [{
   }, {
     name: 'Длительность',
     hint: 'видео',
-    icon: Icon28HistoryForwardOutline,
+    icon: Icon28RecentOutline,
     text: 'не более 15 секунд'
   }, {
     name: 'Видеокодек',
