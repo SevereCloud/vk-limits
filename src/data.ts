@@ -112,4 +112,24 @@ export const data: DataGroup[] = [
       },
     ],
   },
+  {
+    name: 'Документы',
+    color: 'var(--dynamic_gray)',
+    items: [
+      {
+        name: 'Допустимые форматы',
+        icon: Icon28DocumentOutline,
+        text: 'любые форматы за исключением mp3 и исполняемых файлов',
+        link:
+          'https://vk.com/dev/upload_files_2?f=10.%20%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2',
+      },
+      {
+        name: 'Объем',
+        icon: Icon28UploadOutline,
+        text: 'не более 200 МБ',
+        link:
+          'https://vk.com/dev/upload_files_2?f=10.%20%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2',
+      },
+    ],
+  },
 ];
