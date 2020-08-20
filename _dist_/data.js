@@ -51,7 +51,7 @@ export const data = [{
   }, {
     name: 'Длина сообщения',
     icon: Icon28MessageOutline,
-    text: 'до 4096 байт'
+    text: 'примерно до 4096 байт'
   }]
 }, {
   name: 'Фотографии',
@@ -150,7 +150,7 @@ export const data = [{
   }, {
     name: 'Размер файла',
     icon: Icon28UploadOutline,
-    text: 'не более 200 МБ',
+    text: 'не более 1024 МБ',
     link: 'https://vk.com/dev/upload_files_2?f=10.%20%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2'
   }]
 }];
