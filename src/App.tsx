@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   Panel,
   PanelHeader,
@@ -24,7 +24,7 @@ interface AppState {
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface AppProps {}
 
-export class App extends Component<AppProps, AppState> {
+export class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
 

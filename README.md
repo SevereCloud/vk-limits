@@ -1,6 +1,12 @@
 # VK лимиты
 
-[Аналог лимитов для Telegram](http://limits.tginfo.me/ru)
+[Сайт](https://severecloud.github.io/vk-limits)
+
+## Как внести изменения
+
+Данные лимитов находятся в файле `src/data.ts`.
+
+Смотри файл [CONTRIBUTING.md](https://github.com/SevereCloud/vk-limits/blob/master/CONTRIBUTING.md)
 
 ## Команды
 
@@ -21,6 +27,6 @@ npm run linter
 npm run build
 ```
 
-## Как внести изменения
+## Разное
 
-Смотри файл [CONTRIBUTING.md](https://github.com/SevereCloud/vk-limits/blob/master/CONTRIBUTING.md)
+[Лимиты Telegram](https://limits.tginfo.me/ru)
