@@ -101,15 +101,15 @@ export class App extends Component<AppProps, AppState> {
               onClick={() => {
                 this.changeScheme();
               }}
+              style={{ cursor: 'pointer' }}
             >
               <Icon28MoonOutline width={24} height={24} />
             </PanelHeaderButton>
           }
           right={
             <PanelHeaderButton
-              onClick={() => {
-                this.changeScheme();
-              }}
+              target="_blank"
+              href="https://github.com/SevereCloud/vk-limits"
             >
               <IconGitHub />
             </PanelHeaderButton>
