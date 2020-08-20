@@ -10,13 +10,23 @@ export class App extends React.Component {
     // TODO: проверка темной темы у браузера
 
     this.state = {
-      activeView: 'main',
-      activePanel: 'main',
       scheme: 'bright_light',
       search: ''
     };
     this.onChange = this.onChange.bind(this);
     this.changeScheme = this.changeScheme.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.vkAPI.onUpdateConfig(data => {
+      const schemeAttribute = document.createAttribute('scheme');
+      schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
+      this.setState({
+        scheme: data.scheme
+      });
+      document.body.attributes.setNamedItem(schemeAttribute);
+    });
+    this.props.vkAPI.initApp();
   }
 
   onChange(e) {
@@ -70,7 +80,10 @@ export class App extends React.Component {
     return /*#__PURE__*/React.createElement(Panel, {
       id: "main"
     }, /*#__PURE__*/React.createElement(PanelHeader, {
-      left: /*#__PURE__*/React.createElement(PanelHeaderButton, {
+      left: this.props.mobile ? /*#__PURE__*/React.createElement(PanelHeaderButton, {
+        target: "_blank",
+        href: "https://github.com/SevereCloud/vk-limits"
+      }, /*#__PURE__*/React.createElement(IconGitHub, null)) : /*#__PURE__*/React.createElement(PanelHeaderButton, {
         onClick: () => {
           this.changeScheme();
         },
@@ -81,7 +94,7 @@ export class App extends React.Component {
         width: 24,
         height: 24
       })),
-      right: /*#__PURE__*/React.createElement(PanelHeaderButton, {
+      right: !this.props.mobile && /*#__PURE__*/React.createElement(PanelHeaderButton, {
         target: "_blank",
         href: "https://github.com/SevereCloud/vk-limits"
       }, /*#__PURE__*/React.createElement(IconGitHub, null))

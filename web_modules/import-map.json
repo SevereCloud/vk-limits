@@ -17,6 +17,7 @@
     "@vkontakte/icons/dist/28/users_3_outline": "./@vkontakte/icons/dist/28/users_3_outline.js",
     "@vkontakte/icons/dist/28/users_outline": "./@vkontakte/icons/dist/28/users_outline.js",
     "@vkontakte/icons/dist/28/videocam_outline": "./@vkontakte/icons/dist/28/videocam_outline.js",
+    "@vkontakte/vk-mini-apps-api": "./@vkontakte/vk-mini-apps-api.js",
     "@vkontakte/vkui": "./@vkontakte/vkui.js",
     "@vkontakte/vkui/dist/vkui.css": "./@vkontakte/vkui/dist/vkui.css",
     "react": "./react.js",
