@@ -13,17 +13,21 @@ import '@vkontakte/vkui/dist/vkui.css';
 import { data, DataGroup, DataItem } from './data';
 import Icon28MoonOutline from '@vkontakte/icons/dist/28/moon_outline';
 import IconGitHub from './icons/IconGitHub';
-import type { AppearanceSchemeType } from '@vkontakte/vk-bridge';
+import type {
+  AppearanceSchemeType,
+  UpdateConfigData,
+} from '@vkontakte/vk-bridge';
+import type { VKMiniAppAPI } from '@vkontakte/vk-mini-apps-api';
 
 interface AppState {
-  activeView: string;
-  activePanel: string;
   scheme: AppearanceSchemeType;
   search: string;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-interface AppProps {}
+interface AppProps {
+  vkAPI: VKMiniAppAPI;
+  mobile: boolean;
+}
 
 export class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
@@ -32,13 +36,23 @@ export class App extends React.Component<AppProps, AppState> {
     // TODO: хранить схему в локальном хранилище, чтобы восстанавливать тему
     // TODO: проверка темной темы у браузера
     this.state = {
-      activeView: 'main',
-      activePanel: 'main',
       scheme: 'bright_light',
       search: '',
     };
+
     this.onChange = this.onChange.bind(this);
     this.changeScheme = this.changeScheme.bind(this);
+  }
+
+  componentDidMount(): void {
+    this.props.vkAPI.onUpdateConfig((data: UpdateConfigData) => {
+      const schemeAttribute = document.createAttribute('scheme');
+      schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
+      this.setState({ scheme: data.scheme });
+      document.body.attributes.setNamedItem(schemeAttribute);
+    });
+
+    this.props.vkAPI.initApp();
   }
 
   onChange(e: React.ChangeEvent<HTMLInputElement>): void {
@@ -98,22 +112,33 @@ export class App extends React.Component<AppProps, AppState> {
       <Panel id="main">
         <PanelHeader
           left={
-            <PanelHeaderButton
-              onClick={() => {
-                this.changeScheme();
-              }}
-              style={{ cursor: 'pointer' }}
-            >
-              <Icon28MoonOutline width={24} height={24} />
-            </PanelHeaderButton>
+            this.props.mobile ? (
+              <PanelHeaderButton
+                target="_blank"
+                href="https://github.com/SevereCloud/vk-limits"
+              >
+                <IconGitHub />
+              </PanelHeaderButton>
+            ) : (
+              <PanelHeaderButton
+                onClick={() => {
+                  this.changeScheme();
+                }}
+                style={{ cursor: 'pointer' }}
+              >
+                <Icon28MoonOutline width={24} height={24} />
+              </PanelHeaderButton>
+            )
           }
           right={
-            <PanelHeaderButton
-              target="_blank"
-              href="https://github.com/SevereCloud/vk-limits"
-            >
-              <IconGitHub />
-            </PanelHeaderButton>
+            !this.props.mobile && (
+              <PanelHeaderButton
+                target="_blank"
+                href="https://github.com/SevereCloud/vk-limits"
+              >
+                <IconGitHub />
+              </PanelHeaderButton>
+            )
           }
         >
           Лимиты
