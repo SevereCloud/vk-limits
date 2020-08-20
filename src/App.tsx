@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { Component } from 'react';
 import {
   Panel,
   PanelHeader,
@@ -21,8 +21,11 @@ interface AppState {
   search: string;
 }
 
-export class App extends React.Component<{}, AppState> {
-  constructor(props: any) {
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
+interface AppProps {}
+
+export class App extends Component<AppProps, AppState> {
+  constructor(props: AppProps) {
     super(props);
 
     // TODO: хранить схему в локальном хранилище, чтобы восстанавливать тему
@@ -37,11 +40,11 @@ export class App extends React.Component<{}, AppState> {
     this.changeScheme = this.changeScheme.bind(this);
   }
 
-  onChange(e: React.ChangeEvent<HTMLInputElement>) {
+  onChange(e: React.ChangeEvent<HTMLInputElement>): void {
     this.setState({ search: e.target.value });
   }
 
-  get limits() {
+  get limits(): DataGroup[] {
     const search = this.state.search.toLowerCase();
     const groups: DataGroup[] = [];
     data.forEach((group) => {
@@ -74,7 +77,7 @@ export class App extends React.Component<{}, AppState> {
   /**
    * Меняет цветовую схему
    */
-  changeScheme() {
+  changeScheme(): void {
     const scheme =
       this.state.scheme === 'bright_light' ? 'space_gray' : 'bright_light';
 
@@ -89,7 +92,7 @@ export class App extends React.Component<{}, AppState> {
     // TODO: проверка темной темы у браузера
   }
 
-  render() {
+  render(): JSX.Element {
     return (
       <Panel id="main">
         <PanelHeader

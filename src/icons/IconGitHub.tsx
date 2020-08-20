@@ -11,8 +11,8 @@ const IconGitHub: FunctionComponent<IconProps> = ({
   fill,
   getRootRef,
   ...restProps
-}) => {
-  const size = Math.max(width!, height!);
+}: IconProps) => {
+  const size = Math.max(width || 24, height || 24);
 
   return (
     <div
