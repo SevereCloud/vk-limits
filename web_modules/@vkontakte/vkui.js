@@ -2606,6 +2606,29 @@ var SimpleCell = function SimpleCell(_ref) {
   }, after, expandable && platform === IOS && /*#__PURE__*/react.createElement(Icon24Chevron, null)));
 };
 
+var Div = function Div(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      getRootRef = _ref.getRootRef,
+      restProps = objectWithoutProperties(_ref, ["className", "children", "getRootRef"]);
+
+  var platform = usePlatform();
+  return /*#__PURE__*/react.createElement("div", _extends_1({}, restProps, {
+    ref: getRootRef,
+    className: classNames(getClassname('Div', platform), className)
+  }), children);
+};
+
+var Footer = function Footer(_ref) {
+  var className = _ref.className,
+      children = _ref.children,
+      restProps = objectWithoutProperties(_ref, ["className", "children"]);
+
+  return /*#__PURE__*/react.createElement(Div, _extends_1({}, restProps, {
+    className: classNames('Footer', className)
+  }), children);
+};
+
 var search_outline = createCommonjsModule(function (module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -2889,4 +2912,4 @@ defineProperty(Search, "defaultProps", {
 
 var Search$1 = withPlatform(Search);
 
-export { Group, Header, Panel$1 as Panel, PanelHeader, PanelHeaderButton, Search$1 as Search, SimpleCell };
+export { Footer, Group, Header, Panel$1 as Panel, PanelHeader, PanelHeaderButton, Search$1 as Search, SimpleCell };

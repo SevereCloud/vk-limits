@@ -1,5 +1,5 @@
 import React from '../web_modules/react.js';
-import { Panel, PanelHeader, Header, Group, Search, PanelHeaderButton, SimpleCell } from '../web_modules/@vkontakte/vkui.js';
+import { Panel, PanelHeader, Header, Group, Search, PanelHeaderButton, SimpleCell, Footer } from '../web_modules/@vkontakte/vkui.js';
 import '../web_modules/@vkontakte/vkui/dist/vkui.css.proxy.js';
 import { data } from './data.js';
 import Icon28MoonOutline from '../web_modules/@vkontakte/icons/dist/28/moon_outline.js';
@@ -98,7 +98,9 @@ export class App extends React.Component {
       key: itemIndex,
       multiline: true,
       before: /*#__PURE__*/React.createElement(item.icon, {
-        fill: group.color
+        fill: group.color,
+        width: 28,
+        height: 28
       }),
       description: item.text,
       href: item.link,
@@ -107,7 +109,7 @@ export class App extends React.Component {
       style: {
         color: 'var(--text_secondary)'
       }
-    }, ' ' + item.hint))))));
+    }, ' ' + item.hint))))), /*#__PURE__*/React.createElement(Footer, null));
   }
 
 }
