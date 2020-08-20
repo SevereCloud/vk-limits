@@ -11,9 +11,9 @@ import Icon24Crop from '@vkontakte/icons/dist/24/crop';
 import Icon24Fullscreen from '@vkontakte/icons/dist/24/fullscreen';
 import Icon28MusicOutline from '@vkontakte/icons/dist/28/music_outline';
 import Icon28VideocamOutline from '@vkontakte/icons/dist/28/videocam_outline';
-import Icon28HistoryForwardOutline from '@vkontakte/icons/dist/28/history_forward_outline';
 import Icon28MessageOutline from '@vkontakte/icons/dist/28/message_outline';
 import Icon28UsersOutline from '@vkontakte/icons/dist/28/users_outline';
+import Icon28RecentOutline from '@vkontakte/icons/dist/28/recent_outline';
 import type { IconProps } from './types';
 
 export interface DataItem {
@@ -167,7 +167,7 @@ export const data: DataGroup[] = [
       {
         name: 'Длительность',
         hint: 'видео',
-        icon: Icon28HistoryForwardOutline,
+        icon: Icon28RecentOutline,
         text: 'не более 15 секунд',
       },
       {
