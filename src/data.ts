@@ -14,6 +14,15 @@ import Icon28VideocamOutline from '@vkontakte/icons/dist/28/videocam_outline';
 import Icon28MessageOutline from '@vkontakte/icons/dist/28/message_outline';
 import Icon28UsersOutline from '@vkontakte/icons/dist/28/users_outline';
 import Icon28RecentOutline from '@vkontakte/icons/dist/28/recent_outline';
+import Icon28AdvertisingOutline from '@vkontakte/icons/dist/28/advertising_outline';
+import Icon28WorkOutline from '@vkontakte/icons/dist/28/work_outline';
+import Icon20EducationOutline from '@vkontakte/icons/dist/20/education_outline';
+import Icon28KeySquareOutline from '@vkontakte/icons/dist/28/key_square_outline';
+import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
+import Icon28HorseToyOutline from '@vkontakte/icons/dist/28/horse_toy_outline';
+import Icon28FavoriteOutline from '@vkontakte/icons/dist/28/favorite_outline';
+import Icon28LikeOutline from '@vkontakte/icons/dist/28/like_outline';
+import Icon28AttachOutline from '@vkontakte/icons/dist/28/attach_outline';
 import type { IconProps } from './types';
 
 export interface DataItem {
@@ -54,6 +63,57 @@ export const data: DataGroup[] = [
         icon: Icon28NameTagOutline,
         text: 'до 32 символов',
       },
+      {
+        name: 'Статус',
+        icon: Icon28ArticleOutline,
+        text: 'до 140 символов',
+      },
+      {
+        name: 'Пароль',
+        icon: Icon28KeySquareOutline,
+        text: 'от 6 символов',
+      },
+      {
+        name: 'Братья, сестры',
+        icon: Icon28Users3Outline,
+        text: 'до 15 человек',
+      },
+      {
+        name: 'Дети и внуки',
+        icon: Icon28HorseToyOutline,
+        text: 'до 15 детей и до 15 внуков',
+      },
+      {
+        name: 'Среднее образования',
+        icon: Icon20EducationOutline,
+        text: 'до 7 учебных заведений',
+      },
+      {
+        name: 'Высшее образования',
+        icon: Icon20EducationOutline,
+        text: 'до 10 образований',
+      },
+      {
+        name: 'Карьера',
+        icon: Icon28WorkOutline,
+        text: 'до 7 мест работы',
+      },
+      {
+        name: 'Военная служба',
+        icon: Icon28FavoriteOutline,
+        text: 'до 5 воинских частей',
+      },
+      {
+        name: 'Мне нравится',
+        icon: Icon28LikeOutline,
+        text: '500 в сутки',
+      },
+
+      {
+        name: 'Реклама',
+        icon: Icon28AdvertisingOutline,
+        text: 'через 3 месяца после регистрации',
+      },
     ],
   },
   {
@@ -76,6 +136,12 @@ export const data: DataGroup[] = [
         name: 'Длина сообщения',
         icon: Icon28MessageOutline,
         text: 'примерно до 4096 байт',
+      },
+      {
+        name: 'Вложения',
+        hint: 'к сообщению',
+        icon: Icon28AttachOutline,
+        text: 'до 10 вложений',
       },
     ],
   },
