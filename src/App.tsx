@@ -7,6 +7,7 @@ import {
   Search,
   PanelHeaderButton,
   SimpleCell,
+  Footer,
 } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import { data, DataGroup, DataItem } from './data';
@@ -147,6 +148,7 @@ export class App extends React.Component<AppProps, AppState> {
             ))}
           </Group>
         ))}
+        <Footer></Footer>
       </Panel>
     );
   }
