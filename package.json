@@ -1,7 +1,9 @@
 {
+  "license": "MIT",
+  "repository": "https://github.com/SevereCloud/vk-limits",
   "homepage": "https://severecloud.github.io/vk-limits/",
   "scripts": {
-    "start": "snowpack dev",
+    "start": "snowpack dev --reload",
     "tunnel": "vk-tunnel",
     "build": "snowpack build",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
