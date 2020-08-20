@@ -12,6 +12,8 @@ import Icon24Fullscreen from '@vkontakte/icons/dist/24/fullscreen';
 import Icon28MusicOutline from '@vkontakte/icons/dist/28/music_outline';
 import Icon28VideocamOutline from '@vkontakte/icons/dist/28/videocam_outline';
 import Icon28HistoryForwardOutline from '@vkontakte/icons/dist/28/history_forward_outline';
+import Icon28MessageOutline from '@vkontakte/icons/dist/28/message_outline';
+import Icon28UsersOutline from '@vkontakte/icons/dist/28/users_outline';
 import type { IconProps } from './types';
 
 export interface DataItem {
@@ -51,6 +53,29 @@ export const data: DataGroup[] = [
         name: 'Длина имени или фамилии',
         icon: Icon28NameTagOutline,
         text: 'до 32 символов',
+      },
+    ],
+  },
+  {
+    name: 'Чаты',
+    color: 'var(--dynamic_blue)',
+    items: [
+      {
+        name: 'Число участников',
+        hint: '(обычный чат)',
+        icon: Icon28UsersOutline,
+        text: 'до 500 человек',
+      },
+      {
+        name: 'Число участников',
+        hint: '(чат сообщества)',
+        icon: Icon28Users3Outline,
+        text: 'до 3 000 человек',
+      },
+      {
+        name: 'Длина сообщения',
+        icon: Icon28MessageOutline,
+        text: 'до 4096 байт',
       },
     ],
   },
@@ -102,9 +127,9 @@ export const data: DataGroup[] = [
         link: 'https://vk.com/dev/upload_files',
       },
       {
-        name: 'Максимум фотографий в одном альбоме',
+        name: 'Фотографий в одном альбоме',
         icon: Icon28PictureStackOutline,
-        text: '10 000 штук',
+        text: 'до 10 000 фотографий',
         link: 'https://vk.com/faq8209',
       },
       {
