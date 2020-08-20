@@ -14,7 +14,7 @@ const IconGitHub = ({
   getRootRef,
   ...restProps
 }) => {
-  const size = Math.max(width, height);
+  const size = Math.max(width || 24, height || 24);
   return /*#__PURE__*/React.createElement("div", _extends({}, restProps, {
     ref: getRootRef,
     className: `Icon Icon--${size} Icon--w-${width} Icon--h-${height} ${className}`,

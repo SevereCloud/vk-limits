@@ -1,4 +1,4 @@
-import * as React from '../web_modules/react.js';
+import React from '../web_modules/react.js';
 import { Panel, PanelHeader, Header, Group, Search, PanelHeaderButton, SimpleCell } from '../web_modules/@vkontakte/vkui.js';
 import '../web_modules/@vkontakte/vkui/dist/vkui.css.proxy.js';
 import { data } from './data.js';
@@ -73,15 +73,17 @@ export class App extends React.Component {
       left: /*#__PURE__*/React.createElement(PanelHeaderButton, {
         onClick: () => {
           this.changeScheme();
+        },
+        style: {
+          cursor: 'pointer'
         }
       }, /*#__PURE__*/React.createElement(Icon28MoonOutline, {
         width: 24,
         height: 24
       })),
       right: /*#__PURE__*/React.createElement(PanelHeaderButton, {
-        onClick: () => {
-          this.changeScheme();
-        }
+        target: "_blank",
+        href: "https://github.com/SevereCloud/vk-limits"
       }, /*#__PURE__*/React.createElement(IconGitHub, null))
     }, "\u041B\u0438\u043C\u0438\u0442\u044B"), /*#__PURE__*/React.createElement(Search, {
       value: this.state.search,
