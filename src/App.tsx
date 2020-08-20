@@ -133,7 +133,7 @@ export class App extends React.Component<AppProps, AppState> {
               <SimpleCell
                 key={itemIndex}
                 multiline
-                before={<item.icon fill={group.color} />}
+                before={<item.icon fill={group.color} width={28} height={28} />}
                 description={item.text}
                 href={item.link}
                 target="_blank"
