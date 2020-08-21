@@ -23,6 +23,12 @@ import Icon28HorseToyOutline from '@vkontakte/icons/dist/28/horse_toy_outline';
 import Icon28FavoriteOutline from '@vkontakte/icons/dist/28/favorite_outline';
 import Icon28LikeOutline from '@vkontakte/icons/dist/28/like_outline';
 import Icon28AttachOutline from '@vkontakte/icons/dist/28/attach_outline';
+import Icon28ServicesOutline from '@vkontakte/icons/dist/28/services_outline';
+import Icon28GridSquareOutline from '@vkontakte/icons/dist/28/grid_square_outline';
+import Icon28ListOutline from '@vkontakte/icons/dist/28/list_outline';
+import Icon28DownloadOutline from '@vkontakte/icons/dist/28/download_outline';
+import Icon28SearchOutline from '@vkontakte/icons/dist/28/search_outline';
+import Icon28Search from '@vkontakte/icons/dist/28/search';
 import type { IconProps } from './types';
 
 export interface DataItem {
@@ -112,7 +118,7 @@ export const data: DataGroup[] = [
       {
         name: 'Реклама',
         icon: Icon28AdvertisingOutline,
-        text: 'через 3 месяца после регистрации',
+        text: 'появляется через 3 месяца после регистрации',
       },
     ],
   },
@@ -175,9 +181,9 @@ export const data: DataGroup[] = [
         link: 'https://vk.com/dev/upload_files_2',
       },
       {
-        name: 'Максимальная сумма высоты и ширины',
+        name: 'Сумма высоты и ширины',
         icon: Icon24Fullscreen,
-        text: '14 000 px',
+        text: 'до 14 000 px',
         link: 'https://vk.com/faq8209',
       },
       {
@@ -199,9 +205,9 @@ export const data: DataGroup[] = [
         link: 'https://vk.com/faq8209',
       },
       {
-        name: 'Максимум отметок',
+        name: 'Отметки',
         icon: Icon28Users3Outline,
-        text: '35 человек',
+        text: 'до 35 человек',
         link: 'https://vk.com/faq8209',
       },
     ],
@@ -257,7 +263,7 @@ export const data: DataGroup[] = [
       {
         name: 'Допустимые форматы',
         icon: Icon28DocumentOutline,
-        text: 'любые форматы за исключением mp3 и исполняемых файлов',
+        text: 'любые форматы за исключением музыкальных и исполняемых файлов',
         link:
           'https://vk.com/dev/upload_files_2?f=10.%20%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2',
       },
@@ -267,6 +273,68 @@ export const data: DataGroup[] = [
         text: 'не более 1024 МБ',
         link:
           'https://vk.com/dev/upload_files_2?f=10.%20%D0%97%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0%20%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2',
+      },
+    ],
+  },
+  {
+    name: 'API',
+    color: 'var(--dynamic_orange)',
+    items: [
+      {
+        name: 'Запросы от пользователя',
+        icon: Icon28UserOutline,
+        text: '3 в секунду',
+        link: 'https://vk.com/dev/api_requests',
+      },
+      {
+        name: 'Запросы от сообщества',
+        icon: Icon28Users3Outline,
+        text: '20 в секунду',
+        link: 'https://vk.com/dev/api_requests',
+      },
+      {
+        name: 'Запросы от сервиса',
+        icon: Icon28ServicesOutline,
+        text: '3 в секунду',
+        link: 'https://vk.com/dev/api_requests',
+      },
+      {
+        name: 'Вызовы методов Execute',
+        hint: 'в рамках одного запроса',
+        icon: Icon28GridSquareOutline,
+        text: 'до 25 обращений к разным методам',
+        link: 'https://vk.com/dev/execute',
+      },
+      {
+        name: 'Операции Execute',
+        hint: 'в рамках одного запроса',
+        icon: Icon28ListOutline,
+        text: 'до 1000 операций',
+        link: 'https://vk.com/dev/execute',
+      },
+      {
+        name: 'Размер ответа Execute',
+        icon: Icon28DownloadOutline,
+        text: 'не более 5 МБ',
+        link: 'https://vk.com/dev/execute',
+      },
+      {
+        name: 'Лимит на newsfeed.search',
+        icon: Icon28SearchOutline,
+        text: '1000 вызовов в сутки',
+        link: 'https://vk.com/dev/data_limits',
+      },
+      {
+        name: 'Лимит на wall.search',
+        icon: Icon28Search,
+        text: '1000 вызовов в сутки',
+        link: 'https://vk.com/dev/data_limits',
+      },
+      {
+        name: 'Лимит на wall.get',
+        icon: Icon28ArticleOutline,
+        text: '5000 вызовов в сутки',
+        link: 'https://vk.com/dev/data_limits',
       },
     ],
   },
