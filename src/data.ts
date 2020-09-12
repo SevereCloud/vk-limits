@@ -1,34 +1,36 @@
-import Icon28UserOutline from '@vkontakte/icons/dist/28/user_outline';
-import Icon28NameTagOutline from '@vkontakte/icons/dist/28/name_tag_outline';
-import Icon28PictureStackOutline from '@vkontakte/icons/dist/28/picture_stack_outline';
-import Icon28Users3Outline from '@vkontakte/icons/dist/28/users_3_outline';
-import Icon28DocumentOutline from '@vkontakte/icons/dist/28/document_outline';
-import Icon28UserSquareOutline from '@vkontakte/icons/dist/28/user_square_outline';
-import Icon28UploadOutline from '@vkontakte/icons/dist/28/upload_outline';
-import Icon28MarketOutline from '@vkontakte/icons/dist/28/market_outline';
-import Icon28MarketLikeOutline from '@vkontakte/icons/dist/28/market_like_outline';
-import Icon24Crop from '@vkontakte/icons/dist/24/crop';
-import Icon24Fullscreen from '@vkontakte/icons/dist/24/fullscreen';
-import Icon28MusicOutline from '@vkontakte/icons/dist/28/music_outline';
-import Icon28VideocamOutline from '@vkontakte/icons/dist/28/videocam_outline';
-import Icon28MessageOutline from '@vkontakte/icons/dist/28/message_outline';
-import Icon28UsersOutline from '@vkontakte/icons/dist/28/users_outline';
-import Icon28RecentOutline from '@vkontakte/icons/dist/28/recent_outline';
-import Icon28AdvertisingOutline from '@vkontakte/icons/dist/28/advertising_outline';
-import Icon28WorkOutline from '@vkontakte/icons/dist/28/work_outline';
-import Icon20EducationOutline from '@vkontakte/icons/dist/20/education_outline';
-import Icon28KeySquareOutline from '@vkontakte/icons/dist/28/key_square_outline';
-import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
-import Icon28HorseToyOutline from '@vkontakte/icons/dist/28/horse_toy_outline';
-import Icon28FavoriteOutline from '@vkontakte/icons/dist/28/favorite_outline';
-import Icon28LikeOutline from '@vkontakte/icons/dist/28/like_outline';
-import Icon28AttachOutline from '@vkontakte/icons/dist/28/attach_outline';
-import Icon28ServicesOutline from '@vkontakte/icons/dist/28/services_outline';
-import Icon28GridSquareOutline from '@vkontakte/icons/dist/28/grid_square_outline';
-import Icon28ListOutline from '@vkontakte/icons/dist/28/list_outline';
-import Icon28DownloadOutline from '@vkontakte/icons/dist/28/download_outline';
-import Icon28SearchOutline from '@vkontakte/icons/dist/28/search_outline';
-import Icon28Search from '@vkontakte/icons/dist/28/search';
+import {
+  Icon28UserOutline,
+  Icon28NameTagOutline,
+  Icon28PictureStackOutline,
+  Icon28Users3Outline,
+  Icon28DocumentOutline,
+  Icon28UserSquareOutline,
+  Icon28UploadOutline,
+  Icon28MarketOutline,
+  Icon28MarketLikeOutline,
+  Icon24Crop,
+  Icon24Fullscreen,
+  Icon28MusicOutline,
+  Icon28VideocamOutline,
+  Icon28MessageOutline,
+  Icon28UsersOutline,
+  Icon28RecentOutline,
+  Icon28AdvertisingOutline,
+  Icon28WorkOutline,
+  Icon20EducationOutline,
+  Icon28KeySquareOutline,
+  Icon28ArticleOutline,
+  Icon28HorseToyOutline,
+  Icon28FavoriteOutline,
+  Icon28LikeOutline,
+  Icon28AttachOutline,
+  Icon28ServicesOutline,
+  Icon28GridSquareOutline,
+  Icon28ListOutline,
+  Icon28DownloadOutline,
+  Icon28SearchOutline,
+  Icon28Search,
+} from '@vkontakte/icons';
 import type { IconProps } from './types';
 
 export interface DataItem {
