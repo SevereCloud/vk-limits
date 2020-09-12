@@ -1,34 +1,4 @@
-import Icon28UserOutline from '../web_modules/@vkontakte/icons/dist/28/user_outline.js';
-import Icon28NameTagOutline from '../web_modules/@vkontakte/icons/dist/28/name_tag_outline.js';
-import Icon28PictureStackOutline from '../web_modules/@vkontakte/icons/dist/28/picture_stack_outline.js';
-import Icon28Users3Outline from '../web_modules/@vkontakte/icons/dist/28/users_3_outline.js';
-import Icon28DocumentOutline from '../web_modules/@vkontakte/icons/dist/28/document_outline.js';
-import Icon28UserSquareOutline from '../web_modules/@vkontakte/icons/dist/28/user_square_outline.js';
-import Icon28UploadOutline from '../web_modules/@vkontakte/icons/dist/28/upload_outline.js';
-import Icon28MarketOutline from '../web_modules/@vkontakte/icons/dist/28/market_outline.js';
-import Icon28MarketLikeOutline from '../web_modules/@vkontakte/icons/dist/28/market_like_outline.js';
-import Icon24Crop from '../web_modules/@vkontakte/icons/dist/24/crop.js';
-import Icon24Fullscreen from '../web_modules/@vkontakte/icons/dist/24/fullscreen.js';
-import Icon28MusicOutline from '../web_modules/@vkontakte/icons/dist/28/music_outline.js';
-import Icon28VideocamOutline from '../web_modules/@vkontakte/icons/dist/28/videocam_outline.js';
-import Icon28MessageOutline from '../web_modules/@vkontakte/icons/dist/28/message_outline.js';
-import Icon28UsersOutline from '../web_modules/@vkontakte/icons/dist/28/users_outline.js';
-import Icon28RecentOutline from '../web_modules/@vkontakte/icons/dist/28/recent_outline.js';
-import Icon28AdvertisingOutline from '../web_modules/@vkontakte/icons/dist/28/advertising_outline.js';
-import Icon28WorkOutline from '../web_modules/@vkontakte/icons/dist/28/work_outline.js';
-import Icon20EducationOutline from '../web_modules/@vkontakte/icons/dist/20/education_outline.js';
-import Icon28KeySquareOutline from '../web_modules/@vkontakte/icons/dist/28/key_square_outline.js';
-import Icon28ArticleOutline from '../web_modules/@vkontakte/icons/dist/28/article_outline.js';
-import Icon28HorseToyOutline from '../web_modules/@vkontakte/icons/dist/28/horse_toy_outline.js';
-import Icon28FavoriteOutline from '../web_modules/@vkontakte/icons/dist/28/favorite_outline.js';
-import Icon28LikeOutline from '../web_modules/@vkontakte/icons/dist/28/like_outline.js';
-import Icon28AttachOutline from '../web_modules/@vkontakte/icons/dist/28/attach_outline.js';
-import Icon28ServicesOutline from '../web_modules/@vkontakte/icons/dist/28/services_outline.js';
-import Icon28GridSquareOutline from '../web_modules/@vkontakte/icons/dist/28/grid_square_outline.js';
-import Icon28ListOutline from '../web_modules/@vkontakte/icons/dist/28/list_outline.js';
-import Icon28DownloadOutline from '../web_modules/@vkontakte/icons/dist/28/download_outline.js';
-import Icon28SearchOutline from '../web_modules/@vkontakte/icons/dist/28/search_outline.js';
-import Icon28Search from '../web_modules/@vkontakte/icons/dist/28/search.js';
+import { Icon28UserOutline, Icon28NameTagOutline, Icon28PictureStackOutline, Icon28Users3Outline, Icon28DocumentOutline, Icon28UserSquareOutline, Icon28UploadOutline, Icon28MarketOutline, Icon28MarketLikeOutline, Icon24Crop, Icon24Fullscreen, Icon28MusicOutline, Icon28VideocamOutline, Icon28MessageOutline, Icon28UsersOutline, Icon28RecentOutline, Icon28AdvertisingOutline, Icon28WorkOutline, Icon20EducationOutline, Icon28KeySquareOutline, Icon28ArticleOutline, Icon28HorseToyOutline, Icon28FavoriteOutline, Icon28LikeOutline, Icon28AttachOutline, Icon28ServicesOutline, Icon28GridSquareOutline, Icon28ListOutline, Icon28DownloadOutline, Icon28SearchOutline, Icon28Search } from '../web_modules/@vkontakte/icons.js';
 
 /**
  * Данные лимитов

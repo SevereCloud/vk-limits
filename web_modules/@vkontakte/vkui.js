@@ -1,6 +1,18 @@
-import { c as createCommonjsModule, r as react, g as getDefaultExportFromCjs } from '../common/index-2cd4dd6b.js';
-import { b as browserSymbol, s as sprite, S as SvgIcon_1, e as es6ObjectAssign } from '../common/SvgIcon-981d2669.js';
+import { c as createCommonjsModule, r as react, g as getDefaultExportFromCjs } from '../common/index-f6a4afc8.js';
+import { a as browserSymbol, e as es6ObjectAssign } from '../common/browser-sprite-1f8b4710.js';
+import { s as sprite, S as SvgIcon_1 } from '../common/SvgIcon-63e51bce.js';
 import { b as bridge } from '../common/index.es-626e8131.js';
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+var ReactPropTypesSecret_1 = ReactPropTypesSecret;
 
 var canUseDOM = !!(typeof window !== 'undefined' && window.document &&
 /* eslint-disable */
@@ -219,16 +231,63 @@ function _defineProperty(obj, key, value) {
 
 var defineProperty = _defineProperty;
 
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
+/** @license React v16.13.1
+ * react-is.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
+var b="function"===typeof Symbol&&Symbol.for,c=b?Symbol.for("react.element"):60103,d=b?Symbol.for("react.portal"):60106,e=b?Symbol.for("react.fragment"):60107,f=b?Symbol.for("react.strict_mode"):60108,g=b?Symbol.for("react.profiler"):60114,h=b?Symbol.for("react.provider"):60109,k=b?Symbol.for("react.context"):60110,l=b?Symbol.for("react.async_mode"):60111,m=b?Symbol.for("react.concurrent_mode"):60111,n=b?Symbol.for("react.forward_ref"):60112,p=b?Symbol.for("react.suspense"):60113,q=b?
+Symbol.for("react.suspense_list"):60120,r=b?Symbol.for("react.memo"):60115,t=b?Symbol.for("react.lazy"):60116,v=b?Symbol.for("react.block"):60121,w=b?Symbol.for("react.fundamental"):60117,x=b?Symbol.for("react.responder"):60118,y=b?Symbol.for("react.scope"):60119;
+function z(a){if("object"===typeof a&&null!==a){var u=a.$$typeof;switch(u){case c:switch(a=a.type,a){case l:case m:case e:case g:case f:case p:return a;default:switch(a=a&&a.$$typeof,a){case k:case n:case t:case r:case h:return a;default:return u}}case d:return u}}}function A(a){return z(a)===m}var AsyncMode=l;var ConcurrentMode=m;var ContextConsumer=k;var ContextProvider=h;var Element$1=c;var ForwardRef=n;var Fragment=e;var Lazy=t;var Memo=r;var Portal=d;
+var Profiler=g;var StrictMode=f;var Suspense=p;var isAsyncMode=function(a){return A(a)||z(a)===l};var isConcurrentMode=A;var isContextConsumer=function(a){return z(a)===k};var isContextProvider=function(a){return z(a)===h};var isElement=function(a){return "object"===typeof a&&null!==a&&a.$$typeof===c};var isForwardRef=function(a){return z(a)===n};var isFragment=function(a){return z(a)===e};var isLazy=function(a){return z(a)===t};
+var isMemo=function(a){return z(a)===r};var isPortal=function(a){return z(a)===d};var isProfiler=function(a){return z(a)===g};var isStrictMode=function(a){return z(a)===f};var isSuspense=function(a){return z(a)===p};
+var isValidElementType=function(a){return "string"===typeof a||"function"===typeof a||a===e||a===m||a===g||a===f||a===p||a===q||"object"===typeof a&&null!==a&&(a.$$typeof===t||a.$$typeof===r||a.$$typeof===h||a.$$typeof===k||a.$$typeof===n||a.$$typeof===w||a.$$typeof===x||a.$$typeof===y||a.$$typeof===v)};var typeOf=z;
 
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+var reactIs_production_min = {
+	AsyncMode: AsyncMode,
+	ConcurrentMode: ConcurrentMode,
+	ContextConsumer: ContextConsumer,
+	ContextProvider: ContextProvider,
+	Element: Element$1,
+	ForwardRef: ForwardRef,
+	Fragment: Fragment,
+	Lazy: Lazy,
+	Memo: Memo,
+	Portal: Portal,
+	Profiler: Profiler,
+	StrictMode: StrictMode,
+	Suspense: Suspense,
+	isAsyncMode: isAsyncMode,
+	isConcurrentMode: isConcurrentMode,
+	isContextConsumer: isContextConsumer,
+	isContextProvider: isContextProvider,
+	isElement: isElement,
+	isForwardRef: isForwardRef,
+	isFragment: isFragment,
+	isLazy: isLazy,
+	isMemo: isMemo,
+	isPortal: isPortal,
+	isProfiler: isProfiler,
+	isStrictMode: isStrictMode,
+	isSuspense: isSuspense,
+	isValidElementType: isValidElementType,
+	typeOf: typeOf
+};
 
-var ReactPropTypesSecret_1 = ReactPropTypesSecret;
+var reactIs_development = createCommonjsModule(function (module, exports) {
+});
+
+var reactIs = createCommonjsModule(function (module) {
+
+{
+  module.exports = reactIs_production_min;
+}
+});
+
+var has = Function.call.bind(Object.prototype.hasOwnProperty);
 
 function emptyFunction() {}
 function emptyFunctionWithReset() {}
@@ -290,7 +349,7 @@ var propTypes = createCommonjsModule(function (module) {
  * LICENSE file in the root directory of this source tree.
  */
 
-{
+var ReactIs, throwOnDirectAccess; {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
   module.exports = factoryWithThrowingShims();
@@ -2205,37 +2264,46 @@ var _browserSymbol = _interopRequireDefault(browserSymbol);
 
 
 
-var _sprite = _interopRequireDefault(sprite);
 
-var _SvgIcon = _interopRequireDefault(SvgIcon_1);
+
+
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// @ts-ignore
+// @ts-ignore
 var viewBox = '0 0 16 24';
 var id = 'chevron_24';
 var content = '<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 24" id="chevron_24"><g fill="none" fill-rule="evenodd"><path d="M0 0h16v24H0z" /><path d="M4.706 7.706a1 1 0 010-1.412l.088-.088a.997.997 0 011.414.002l5.084 5.084a.998.998 0 010 1.416l-5.084 5.084a1.002 1.002 0 01-1.414.002l-.088-.088a.995.995 0 010-1.412L9 12 4.706 7.706z" fill="currentColor" /></g></symbol>';
+var isMounted = false;
 
-if (_sprite.default) {
-  var browserSymbol$1 = new _browserSymbol.default({
-    id: id,
-    viewBox: viewBox,
-    content: content
-  });
-
-  _sprite.default.add(browserSymbol$1);
+function mountIcon() {
+  if (!isMounted) {
+    (0, sprite.addSpriteSymbol)(new _browserSymbol.default({
+      id: id,
+      viewBox: viewBox,
+      content: content
+    }));
+    isMounted = true;
+  }
 }
 
-function Icon(props) {
-  return _react.default.createElement(_SvgIcon.default, (0, es6ObjectAssign.assign)({}, props, {
+var Icon24Chevron = function Icon24Chevron(props) {
+  (0, sprite.useIsomorphicLayoutEffect)(function () {
+    mountIcon();
+  }, []);
+  return _react.default.createElement(SvgIcon_1.SvgIcon, (0, es6ObjectAssign.assign)({}, props, {
     viewBox: viewBox,
     id: id,
     width: !isNaN(props.width) ? +props.width : 16,
     height: !isNaN(props.height) ? +props.height : 24
   }));
-}
+};
 
-var _default = Icon;
+Icon24Chevron.mountIcon = mountIcon;
+var _default = Icon24Chevron;
 exports.default = _default;
+
 });
 
 var Icon24Chevron = /*@__PURE__*/getDefaultExportFromCjs(chevron);
@@ -2308,37 +2376,46 @@ var _browserSymbol = _interopRequireDefault(browserSymbol);
 
 
 
-var _sprite = _interopRequireDefault(sprite);
 
-var _SvgIcon = _interopRequireDefault(SvgIcon_1);
+
+
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// @ts-ignore
+// @ts-ignore
 var viewBox = '0 0 16 16';
 var id = 'search_outline_16';
-var content = '<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="search_outline_16"><g fill="none" fill-rule="evenodd" opacity=".92"><path opacity=".1" d="M0 0h16v16H0z" /><path d="M9.823 10.884a5.5 5.5 0 111.06-1.06l3.896 3.9a.75.75 0 01-1.061 1.06l-3.895-3.9zM6.5 10.5a4 4 0 100-8 4 4 0 000 8z" fill="currentColor" fill-rule="nonzero" /></g></symbol>';
+var content = '<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="search_outline_16"><path d="M6.5 1a5.5 5.5 0 014.383 8.823l3.896 3.9a.75.75 0 01-1.061 1.06l-3.895-3.9A5.5 5.5 0 116.5 1zm0 1.5a4 4 0 100 8 4 4 0 000-8z" fill="currentColor" /></symbol>';
+var isMounted = false;
 
-if (_sprite.default) {
-  var browserSymbol$1 = new _browserSymbol.default({
-    id: id,
-    viewBox: viewBox,
-    content: content
-  });
-
-  _sprite.default.add(browserSymbol$1);
+function mountIcon() {
+  if (!isMounted) {
+    (0, sprite.addSpriteSymbol)(new _browserSymbol.default({
+      id: id,
+      viewBox: viewBox,
+      content: content
+    }));
+    isMounted = true;
+  }
 }
 
-function Icon(props) {
-  return _react.default.createElement(_SvgIcon.default, (0, es6ObjectAssign.assign)({}, props, {
+var Icon16SearchOutline = function Icon16SearchOutline(props) {
+  (0, sprite.useIsomorphicLayoutEffect)(function () {
+    mountIcon();
+  }, []);
+  return _react.default.createElement(SvgIcon_1.SvgIcon, (0, es6ObjectAssign.assign)({}, props, {
     viewBox: viewBox,
     id: id,
     width: !isNaN(props.width) ? +props.width : 16,
     height: !isNaN(props.height) ? +props.height : 16
   }));
-}
+};
 
-var _default = Icon;
+Icon16SearchOutline.mountIcon = mountIcon;
+var _default = Icon16SearchOutline;
 exports.default = _default;
+
 });
 
 var Icon16SearchOutline = /*@__PURE__*/getDefaultExportFromCjs(search_outline);
@@ -2356,37 +2433,46 @@ var _browserSymbol = _interopRequireDefault(browserSymbol);
 
 
 
-var _sprite = _interopRequireDefault(sprite);
 
-var _SvgIcon = _interopRequireDefault(SvgIcon_1);
+
+
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// @ts-ignore
+// @ts-ignore
 var viewBox = '0 0 16 16';
 var id = 'clear_16';
 var content = '<symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="clear_16"><path d="M6.729 8.002L4.263 10.47a.9.9 0 101.273 1.273L8 9.275l2.465 2.468a.9.9 0 101.272-1.273L9.273 8.002l2.465-2.469a.9.9 0 10-1.272-1.273L8 6.728 5.536 4.26a.9.9 0 00-1.273 1.273l2.466 2.469zM8 16A8 8 0 118 0a8 8 0 010 16z" fill="currentColor" fill-rule="evenodd" /></symbol>';
+var isMounted = false;
 
-if (_sprite.default) {
-  var browserSymbol$1 = new _browserSymbol.default({
-    id: id,
-    viewBox: viewBox,
-    content: content
-  });
-
-  _sprite.default.add(browserSymbol$1);
+function mountIcon() {
+  if (!isMounted) {
+    (0, sprite.addSpriteSymbol)(new _browserSymbol.default({
+      id: id,
+      viewBox: viewBox,
+      content: content
+    }));
+    isMounted = true;
+  }
 }
 
-function Icon(props) {
-  return _react.default.createElement(_SvgIcon.default, (0, es6ObjectAssign.assign)({}, props, {
+var Icon16Clear = function Icon16Clear(props) {
+  (0, sprite.useIsomorphicLayoutEffect)(function () {
+    mountIcon();
+  }, []);
+  return _react.default.createElement(SvgIcon_1.SvgIcon, (0, es6ObjectAssign.assign)({}, props, {
     viewBox: viewBox,
     id: id,
     width: !isNaN(props.width) ? +props.width : 16,
     height: !isNaN(props.height) ? +props.height : 16
   }));
-}
+};
 
-var _default = Icon;
+Icon16Clear.mountIcon = mountIcon;
+var _default = Icon16Clear;
 exports.default = _default;
+
 });
 
 var Icon16Clear = /*@__PURE__*/getDefaultExportFromCjs(clear);

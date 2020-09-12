@@ -155,6 +155,9 @@ var react_production_min = {
 	version: version
 };
 
+var react_development = createCommonjsModule(function (module, exports) {
+});
+
 var react = createCommonjsModule(function (module) {
 
 {
