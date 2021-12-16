@@ -107,7 +107,7 @@ function promisifySend(sendEvent, subscribe) {
     var requestResolver = createRequestResolver();
     // Subscribe to receive a data
     subscribe(function (event) {
-        if (!event.detail || !event.detail.data) {
+        if (!event.detail || !event.detail.data || typeof event.detail.data !== 'object') {
             return;
         }
         // There is no request_id in receive-only events, so we check its existence.
@@ -149,12 +149,18 @@ var DESKTOP_METHODS = __spreadArrays([
     'VKWebAppInit',
     'VKWebAppGetCommunityAuthToken',
     'VKWebAppAddToCommunity',
+    'VKWebAppAddToHomeScreenInfo',
+    'VKWebAppClose',
+    'VKWebAppCopyText',
     'VKWebAppGetUserInfo',
     'VKWebAppSetLocation',
+    'VKWebAppSendToClient',
     'VKWebAppGetClientVersion',
     'VKWebAppGetPhoneNumber',
     'VKWebAppGetEmail',
+    'VKWebAppGetGroupInfo',
     'VKWebAppGetGeodata',
+    'VKWebAppGetCommunityToken',
     'VKWebAppSetTitle',
     'VKWebAppGetAuthToken',
     'VKWebAppCallAPIMethod',
@@ -177,8 +183,13 @@ var DESKTOP_METHODS = __spreadArrays([
     'VKWebAppShowStoryBox',
     'VKWebAppStorageGet',
     'VKWebAppStorageGetKeys',
-    'VKWebAppStorageSet'
-], (IS_DESKTOP_VK ? ['VKWebAppResizeWindow', 'VKWebAppAddToMenu', 'VkWebAppShowSubscriptionBox', 'VkWebAppShowInstallPushBox'] : []));
+    'VKWebAppStorageSet',
+    'VKWebAppFlashGetInfo',
+    'VKWebAppSubscribeStoryApp',
+    'VKWebAppOpenWallPost',
+    'VKWebAppCheckAllowedScopes',
+    'VKWebAppShowNativeAds'
+], (IS_DESKTOP_VK ? ['VKWebAppResizeWindow', 'VKWebAppAddToMenu', 'VKWebAppShowSubscriptionBox', 'VKWebAppShowInstallPushBox', 'VKWebAppGetFriends'] : ['VKWebAppShowImages']));
 /** Android VK Bridge interface. */
 var androidBridge = IS_CLIENT_SIDE
     ? window.AndroidBridge
@@ -263,6 +274,11 @@ function createVKBridge(version) {
         else if (IS_WEB) {
             // Web support check
             return DESKTOP_METHODS.indexOf(method) > -1;
+            // if (!webSdkHandlers) {
+            //   console.error('You should call bridge.send("VKWebAppInit") first');
+            //   return false;
+            // }
+            // return webSdkHandlers.includes(method);
         }
         return false;
     }
@@ -273,6 +289,30 @@ function createVKBridge(version) {
      */
     function isWebView() {
         return IS_IOS_WEBVIEW || IS_ANDROID_WEBVIEW;
+    }
+    /**
+     * Checks whether the runtime is an iframe.
+     *
+     * @returns Result of checking.
+     */
+    function isIframe() {
+        return IS_WEB && window.parent !== window;
+    }
+    /**
+     * Checks whether the runtime is embedded.
+     *
+     * @returns Result of checking.
+     */
+    function isEmbedded() {
+        return isWebView() || isIframe();
+    }
+    /**
+     * Checks whether the runtime is standalone.
+     *
+     * @returns Result of checking.
+     */
+    function isStandalone() {
+        return !isEmbedded();
     }
     // Subscribes to listening messages from a runtime for calling each
     // subscribed event listener.
@@ -285,7 +325,8 @@ function createVKBridge(version) {
             else if (IS_WEB && event && event.data) {
                 // If it's web
                 var _a = event.data, type_1 = _a.type, data_1 = _a.data, frameId = _a.frameId;
-                if (type_1 && type_1 === 'VKWebAppSettings') {
+                if (type_1 && type_1 === 'SetSupportedHandlers') ;
+                else if (type_1 && type_1 === 'VKWebAppSettings') {
                     webFrameId = frameId;
                 }
                 else {
@@ -306,6 +347,9 @@ function createVKBridge(version) {
         unsubscribe: unsubscribe,
         supports: supports,
         isWebView: isWebView,
+        isIframe: isIframe,
+        isEmbedded: isEmbedded,
+        isStandalone: isStandalone,
     };
 }
 
@@ -324,7 +368,7 @@ function createCustomEventPolyfill() {
     return CustomEvent;
 }
 
-var version = "2.2.7";
+var version = "2.4.8";
 
 // Applying CustomEvent polyfill
 if (typeof window !== 'undefined' && !window.CustomEvent) {

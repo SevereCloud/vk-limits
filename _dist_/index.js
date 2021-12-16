@@ -3,9 +3,10 @@ import.meta.env = __SNOWPACK_ENV__;
 
 import React from '../web_modules/react.js';
 import ReactDOM from '../web_modules/react-dom.js';
-import { App } from './App.js';
+import App from './App.js';
 import { VKMiniAppAPI } from '../web_modules/@vkontakte/vk-mini-apps-api.js';
 import bridge from '../web_modules/@vkontakte/vk-bridge.js';
+import { AdaptivityProvider, ConfigProvider } from '../web_modules/@vkontakte/vkui.js';
 
 const isMobileApps = () => {
   const url = new URL(window.location.href);
@@ -13,10 +14,10 @@ const isMobileApps = () => {
   return vkPlatform !== null && vkPlatform !== 'desktop_web';
 };
 
-ReactDOM.render( /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(App, {
+ReactDOM.render( /*#__PURE__*/React.createElement(React.StrictMode, null, /*#__PURE__*/React.createElement(ConfigProvider, null, /*#__PURE__*/React.createElement(AdaptivityProvider, null, /*#__PURE__*/React.createElement(App, {
   vkAPI: new VKMiniAppAPI(bridge),
   mobile: isMobileApps()
-})), document.getElementById('root')); // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
+})))), document.getElementById('root')); // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
 // Learn more: https://www.snowpack.dev/#hot-module-replacement
 
 if (import.meta.hot) {

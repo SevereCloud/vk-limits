@@ -1,8 +1,8 @@
-import { c as createCommonjsModule, a as commonjsGlobal } from './index-f6a4afc8.js';
+import { c as createCommonjsModule, a as commonjsGlobal } from './index-50b0b662.js';
 
 var browserSymbol = createCommonjsModule(function (module, exports) {
 (function (global, factory) {
-	 module.exports = factory() ;
+	module.exports = factory() ;
 }(commonjsGlobal, (function () {
 var SpriteSymbol = function SpriteSymbol(ref) {
   var id = ref.id;
@@ -29,9 +29,9 @@ SpriteSymbol.prototype.toString = function toString () {
 };
 
 SpriteSymbol.prototype.destroy = function destroy () {
-    var this$1 = this;
+    var this$1$1 = this;
 
-  ['id', 'viewBox', 'content'].forEach(function (prop) { return delete this$1[prop]; });
+  ['id', 'viewBox', 'content'].forEach(function (prop) { return delete this$1$1[prop]; });
 };
 
 /**
@@ -315,7 +315,7 @@ var es6ObjectAssign = {
 
 var browserSprite = createCommonjsModule(function (module, exports) {
 (function (global, factory) {
-	 module.exports = factory() ;
+	module.exports = factory() ;
 }(commonjsGlobal, (function () {
 var commonjsGlobal$1 = typeof window !== 'undefined' ? window : typeof commonjsGlobal !== 'undefined' ? commonjsGlobal : typeof self !== 'undefined' ? self : {};
 
@@ -631,9 +631,9 @@ SpriteSymbol.prototype.toString = function toString () {
 };
 
 SpriteSymbol.prototype.destroy = function destroy () {
-    var this$1 = this;
+    var this$1$1 = this;
 
-  ['id', 'viewBox', 'content'].forEach(function (prop) { return delete this$1[prop]; });
+  ['id', 'viewBox', 'content'].forEach(function (prop) { return delete this$1$1[prop]; });
 };
 
 /**
@@ -854,7 +854,7 @@ var locationChangeAngularEmitter = function (eventName) {
   }]);
 };
 
-var defaultSelector = 'linearGradient, radialGradient, pattern';
+var defaultSelector = 'linearGradient, radialGradient, pattern, mask, clipPath';
 
 /**
  * @param {Element} svg
@@ -993,7 +993,7 @@ var Events = {
 
 var BrowserSprite = (function (Sprite$$1) {
   function BrowserSprite(cfg) {
-    var this$1 = this;
+    var this$1$1 = this;
     if ( cfg === void 0 ) cfg = {};
 
     Sprite$$1.call(this, deepmerge(defaultConfig$1, cfg));
@@ -1011,7 +1011,7 @@ var BrowserSprite = (function (Sprite$$1) {
 
     if (config.syncUrlsWithBaseTag) {
       var baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-      emitter.on(Events.MOUNT, function () { return this$1.updateUrls('#', baseUrl); });
+      emitter.on(Events.MOUNT, function () { return this$1$1.updateUrls('#', baseUrl); });
     }
 
     var handleLocationChange = this._handleLocationChange.bind(this);
@@ -1123,7 +1123,7 @@ var BrowserSprite = (function (Sprite$$1) {
    * @return {Element|null} attached DOM Element. null if node to attach not found.
    */
   BrowserSprite.prototype.attach = function attach (target) {
-    var this$1 = this;
+    var this$1$1 = this;
 
     var sprite = this;
 
@@ -1138,7 +1138,7 @@ var BrowserSprite = (function (Sprite$$1) {
     // Already added symbols needs to be mounted
     this.symbols.forEach(function (symbol) {
       symbol.mount(sprite.node);
-      this$1._emitter.emit(Events.SYMBOL_MOUNT, symbol.node);
+      this$1$1._emitter.emit(Events.SYMBOL_MOUNT, symbol.node);
     });
 
     // Create symbols from existing DOM nodes, add and mount them
@@ -1248,4 +1248,4 @@ return BrowserSprite;
 })));
 });
 
-export { browserSymbol as a, browserSprite as b, es6ObjectAssign as e };
+export { browserSprite as a, browserSymbol as b, es6ObjectAssign as e };

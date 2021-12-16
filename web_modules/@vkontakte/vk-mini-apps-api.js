@@ -1153,7 +1153,6 @@ var VKMiniAppAPI = /** @class */ (function (_super) {
          * @event VKWebAppShowCommunityWidgetPreviewBox
          */
         _this.showCommunityWidgetPreviewBox = function (communityId, type, code) { return __awaiter(_this, void 0, void 0, function () {
-            var data;
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0: return [4 /*yield*/, this.bridge.send('VKWebAppShowCommunityWidgetPreviewBox', {
@@ -1162,7 +1161,7 @@ var VKMiniAppAPI = /** @class */ (function (_super) {
                             code: code
                         })];
                     case 1:
-                        data = _a.sent();
+                        _a.sent();
                         return [2 /*return*/];
                 }
             });

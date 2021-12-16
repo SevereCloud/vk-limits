@@ -1,27 +1,29 @@
-import { c as createCommonjsModule, r as react } from './index-f6a4afc8.js';
-import { b as browserSprite } from './browser-sprite-1f8b4710.js';
+import { a as browserSprite$1 } from './browser-sprite-29b2ca92.js';
+import { r as react } from './index-50b0b662.js';
 
-var sprite = createCommonjsModule(function (module, exports) {
+function _objectWithoutProperties$1(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose$1(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.addSpriteSymbol = addSpriteSymbol;
-exports.useIsomorphicLayoutEffect = void 0;
+function _objectWithoutPropertiesLoose$1(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+var IconSettingsContext = /*#__PURE__*/react.createContext({});
+var IconSettingsProvider = function IconSettingsProvider(_ref) {
+  var children = _ref.children,
+      settings = _objectWithoutProperties$1(_ref, ["children"]);
 
-var _browserSprite = _interopRequireDefault(browserSprite);
-
-
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+  var contextValue = react.useMemo(function () {
+    return settings;
+  }, [settings.classPrefix, settings.globalClasses]);
+  return /*#__PURE__*/react.createElement(IconSettingsContext.Provider, {
+    value: contextValue
+  }, children);
+};
 
 // @ts-ignore
 var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-var browserSprite$1;
+var browserSprite;
 
 if (canUseDOM) {
   var spriteId = '__SVG_SPRITE_NODE__';
-  browserSprite$1 = new _browserSprite.default({
+  browserSprite = new browserSprite$1({
     attrs: {
       id: spriteId
     }
@@ -31,9 +33,9 @@ if (canUseDOM) {
     var spriteNode = document.getElementById(spriteId);
 
     if (spriteNode) {
-      browserSprite$1.attach(spriteNode);
+      browserSprite.attach(spriteNode);
     } else {
-      browserSprite$1.mount();
+      browserSprite.mount();
     }
   };
 
@@ -43,30 +45,15 @@ if (canUseDOM) {
     document.addEventListener('DOMContentLoaded', mount);
   }
 } else {
-  browserSprite$1 = null;
+  browserSprite = null;
 }
 
 function addSpriteSymbol(symbol) {
-  if (browserSprite$1) {
-    browserSprite$1.add(symbol);
+  if (browserSprite) {
+    browserSprite.add(symbol);
   }
 }
-
 var useIsomorphicLayoutEffect = canUseDOM ? react.useLayoutEffect : react.useEffect;
-exports.useIsomorphicLayoutEffect = useIsomorphicLayoutEffect;
-
-});
-
-var SvgIcon_1 = createCommonjsModule(function (module, exports) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.SvgIcon = void 0;
-
-var _react = _interopRequireDefault(react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
@@ -79,36 +66,58 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
-
 var svgStyle = {
   display: 'block'
 };
 
-var SvgIcon = function SvgIcon(_ref) {
-  var width = _ref.width,
-      height = _ref.height,
-      viewBox = _ref.viewBox,
-      id = _ref.id,
-      className = _ref.className,
-      style = _ref.style,
-      fill = _ref.fill,
-      getRootRef = _ref.getRootRef,
-      restProps = _objectWithoutProperties(_ref, ["width", "height", "viewBox", "id", "className", "style", "fill", "getRootRef"]);
+function iconClass(fragments, _ref) {
+  var classPrefix = _ref.classPrefix,
+      globalClasses = _ref.globalClasses;
+  var res = '';
+
+  for (var i = 0; i < fragments.length; i++) {
+    if (classPrefix) {
+      res += ' ' + (classPrefix + fragments[i]);
+    }
+
+    if (!classPrefix || globalClasses) {
+      res += ' ' + fragments[i];
+    }
+  }
+
+  return res;
+}
+
+var SvgIcon = function SvgIcon(_ref2) {
+  var width = _ref2.width,
+      height = _ref2.height,
+      viewBox = _ref2.viewBox,
+      id = _ref2.id,
+      className = _ref2.className,
+      style = _ref2.style,
+      fill = _ref2.fill,
+      getRootRef = _ref2.getRootRef,
+      Component = _ref2.Component,
+      restProps = _objectWithoutProperties(_ref2, ["width", "height", "viewBox", "id", "className", "style", "fill", "getRootRef", "Component"]);
 
   var size = Math.max(width, height);
-  return /*#__PURE__*/_react.default.createElement("div", _extends({}, restProps, {
+  var iconSettings = react.useContext(IconSettingsContext);
+  var ownClass = iconClass(['Icon', "Icon--".concat(size), "Icon--w-".concat(width), "Icon--h-".concat(height), "Icon--".concat(id)], iconSettings);
+  return /*#__PURE__*/react.createElement(Component, _extends({
+    role: "presentation"
+  }, restProps, {
     ref: getRootRef,
-    className: "Icon Icon--".concat(size, " Icon--w-").concat(width, " Icon--h-").concat(height, " Icon--").concat(id, " ").concat(className),
-    style: _objectSpread({}, style, {
+    className: "".concat(ownClass, " ").concat(className),
+    style: _objectSpread(_objectSpread({}, style), {}, {
       width: width,
       height: height
     })
-  }), /*#__PURE__*/_react.default.createElement("svg", {
+  }), /*#__PURE__*/react.createElement("svg", {
     viewBox: viewBox,
     width: width,
     height: height,
     style: svgStyle
-  }, /*#__PURE__*/_react.default.createElement("use", {
+  }, /*#__PURE__*/react.createElement("use", {
     xlinkHref: "#".concat(id),
     style: {
       fill: 'currentColor',
@@ -116,13 +125,10 @@ var SvgIcon = function SvgIcon(_ref) {
     }
   })));
 };
-
-exports.SvgIcon = SvgIcon;
 SvgIcon.defaultProps = {
+  Component: 'div',
   className: '',
   style: {}
 };
 
-});
-
-export { SvgIcon_1 as S, sprite as s };
+export { IconSettingsProvider as I, SvgIcon as S, addSpriteSymbol as a, useIsomorphicLayoutEffect as u };
