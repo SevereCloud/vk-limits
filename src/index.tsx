@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { App } from './App';
+import App from './App';
 import { VKMiniAppAPI } from '@vkontakte/vk-mini-apps-api';
 import bridge from '@vkontakte/vk-bridge';
+import { AdaptivityProvider, ConfigProvider } from '@vkontakte/vkui';
 
 const isMobileApps = () => {
   const url = new URL(window.location.href);
@@ -12,7 +13,11 @@ const isMobileApps = () => {
 
 ReactDOM.render(
   <React.StrictMode>
-    <App vkAPI={new VKMiniAppAPI(bridge)} mobile={isMobileApps()} />
+    <ConfigProvider>
+      <AdaptivityProvider>
+        <App vkAPI={new VKMiniAppAPI(bridge)} mobile={isMobileApps()} />
+      </AdaptivityProvider>
+    </ConfigProvider>
   </React.StrictMode>,
   document.getElementById('root'),
 );

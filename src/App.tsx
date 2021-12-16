@@ -1,5 +1,9 @@
 import React from 'react';
 import {
+  AppRoot,
+  SplitLayout,
+  SplitCol,
+  ViewWidth,
   Panel,
   PanelHeader,
   Header,
@@ -8,6 +12,8 @@ import {
   PanelHeaderButton,
   SimpleCell,
   Footer,
+  withAdaptivity,
+  View,
 } from '@vkontakte/vkui';
 import '@vkontakte/vkui/dist/vkui.css';
 import { data, DataGroup, DataItem } from './data';
@@ -27,9 +33,10 @@ interface AppState {
 interface AppProps {
   vkAPI: VKMiniAppAPI;
   mobile: boolean;
+  viewWidth?: ViewWidth;
 }
 
-export class App extends React.Component<AppProps, AppState> {
+class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
 
@@ -108,73 +115,129 @@ export class App extends React.Component<AppProps, AppState> {
   }
 
   render(): JSX.Element {
-    return (
-      <Panel id="main">
-        <PanelHeader
-          left={
-            this.props.mobile ? (
-              <PanelHeaderButton
-                target="_blank"
-                href="https://github.com/SevereCloud/vk-limits"
-              >
-                <IconGitHub />
-              </PanelHeaderButton>
-            ) : (
-              <PanelHeaderButton
-                onClick={() => {
-                  this.changeScheme();
-                }}
-                style={{ cursor: 'pointer' }}
-              >
-                <Icon28MoonOutline width={24} height={24} />
-              </PanelHeaderButton>
-            )
-          }
-          right={
-            !this.props.mobile && (
-              <PanelHeaderButton
-                target="_blank"
-                href="https://github.com/SevereCloud/vk-limits"
-              >
-                <IconGitHub />
-              </PanelHeaderButton>
-            )
-          }
-        >
-          Лимиты
-        </PanelHeader>
-        <Search
-          value={this.state.search}
-          onChange={this.onChange}
-          after={null}
-        />
+    const { viewWidth } = this.props;
 
-        {this.limits.map((group, groupIndex) => (
-          <Group
-            key={groupIndex}
-            header={<Header mode="secondary">{group.name}</Header>}
-          >
-            {group.items.map((item, itemIndex) => (
-              <SimpleCell
-                key={itemIndex}
-                multiline
-                before={<item.icon fill={group.color} width={28} height={28} />}
-                description={item.text}
-                href={item.link}
-                target="_blank"
-              >
-                {item.name}
-                {item.hint && (
-                  <span style={{ color: 'var(--text_secondary)' }}>
-                    {' ' + item.hint}
-                  </span>
-                )}
-              </SimpleCell>
-            ))}
-          </Group>
-        ))}
-        <Footer></Footer>
+    const isDesktop = viewWidth && viewWidth >= ViewWidth.TABLET;
+
+    const navigation = (
+      <Panel id="nav">
+        <PanelHeader />
+        <Group>
+          {this.limits.map((group, groupIndex) => (
+            <SimpleCell key={groupIndex} href={`#${group.name}`}>
+              {group.name}
+            </SimpleCell>
+          ))}
+        </Group>
       </Panel>
+    );
+
+    return (
+      <AppRoot>
+        <SplitLayout
+          header={<PanelHeader separator={false} />}
+          style={{ justifyContent: 'center' }}
+        >
+          {isDesktop && (
+            <SplitCol fixed width={280} maxWidth={280}>
+              {navigation}
+            </SplitCol>
+          )}
+          <SplitCol
+            spaced={isDesktop}
+            animate={!isDesktop}
+            width={isDesktop ? '560px' : '100%'}
+            maxWidth={isDesktop ? '560px' : '100%'}
+          >
+            <View activePanel="main">
+              <Panel id="main">
+                <PanelHeader
+                  left={
+                    this.props.mobile ? (
+                      <PanelHeaderButton
+                        target="_blank"
+                        href="https://github.com/SevereCloud/vk-limits"
+                      >
+                        <IconGitHub />
+                      </PanelHeaderButton>
+                    ) : (
+                      <PanelHeaderButton
+                        onClick={() => {
+                          this.changeScheme();
+                        }}
+                        style={{ cursor: 'pointer' }}
+                      >
+                        <Icon28MoonOutline width={24} height={24} />
+                      </PanelHeaderButton>
+                    )
+                  }
+                  right={
+                    !this.props.mobile && (
+                      <PanelHeaderButton
+                        target="_blank"
+                        href="https://github.com/SevereCloud/vk-limits"
+                      >
+                        <IconGitHub />
+                      </PanelHeaderButton>
+                    )
+                  }
+                >
+                  Лимиты
+                </PanelHeader>
+                <Group>
+                  <Search
+                    value={this.state.search}
+                    onChange={this.onChange}
+                    after={null}
+                  />
+                </Group>
+
+                {this.limits.map((group, groupIndex) => (
+                  <Group
+                    key={groupIndex}
+                    header={<Header mode="secondary">{group.name}</Header>}
+                  >
+                    <a
+                      id={group.name}
+                      style={{
+                        display: 'block',
+                        top: -112,
+                        position: 'relative',
+                      }}
+                    ></a>
+                    {group.items.map((item, itemIndex) => (
+                      <SimpleCell
+                        key={itemIndex}
+                        multiline
+                        before={
+                          <item.icon
+                            fill={group.color}
+                            width={28}
+                            height={28}
+                          />
+                        }
+                        description={item.text}
+                        href={item.link}
+                        target="_blank"
+                      >
+                        {item.name}
+                        {item.hint && (
+                          <span style={{ color: 'var(--text_secondary)' }}>
+                            {' ' + item.hint}
+                          </span>
+                        )}
+                      </SimpleCell>
+                    ))}
+                  </Group>
+                ))}
+                <Footer></Footer>
+              </Panel>
+            </View>
+          </SplitCol>
+        </SplitLayout>
+      </AppRoot>
     );
   }
 }
+
+export default withAdaptivity(App, { viewWidth: true });
