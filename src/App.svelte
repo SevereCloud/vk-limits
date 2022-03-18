@@ -23,7 +23,7 @@
   const platform = usePlatform();
   $: console.log($adaptivity);
 
-  $: isDesktop = $adaptivity.viewWidth >= ViewWidth.TABLET;
+  $: isDesktop = $adaptivity.viewWidth >= ViewWidth.SMALL_TABLET;
 
   const searchData = (search: string): DataGroup[] => {
     const groups: DataGroup[] = [];
@@ -86,7 +86,7 @@
     <SplitCol
       spaced={isDesktop}
       animate={!isDesktop}
-      width={isDesktop ? "560px" : "100%"}
+      width={isDesktop ? "400px" : "100%"}
       maxWidth={isDesktop ? "560px" : "100%"}
     >
       <Panel id="main">
@@ -111,8 +111,9 @@
           </Group>
         {/each}
         <Footer
-          ><Link href="https://github.com/SevereCloud/vk-limits/edit/master/src/data.ts" target="_blank"
-            >Редактировать</Link
+          ><Link
+            href="https://github.com/SevereCloud/vk-limits/edit/master/src/data.ts"
+            target="_blank">Редактировать</Link
           ></Footer
         >
       </Panel>
@@ -126,7 +127,7 @@
   }
 
   :global(.SplitLayout--vkcom .Doc) {
-    margin-top: 0!important;
+    margin-top: 0 !important;
   }
 
   .Archer {

@@ -12,7 +12,7 @@
 		bridge.send('VKWebAppInit', {});
 
 		bridge.send('VKWebAppGetLaunchParams').then((data) => {
-			if (data.vk_platform !== 'desktop_web') {
+			if (data.vk_platform === 'desktop_web') {
 				platform = VKCOM
 			}
 		});
