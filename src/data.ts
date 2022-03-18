@@ -30,12 +30,11 @@ import {
   Icon28DownloadOutline,
   Icon28SearchOutline,
   Icon28Search,
-} from '@vkontakte/icons';
-import type { IconProps } from './types';
+} from '@sveltevk/icons';
 
 export interface DataItem {
   name: string;
-  icon: React.FunctionComponent<IconProps>;
+  icon: typeof Icon28UserOutline;
   text: string;
   hint?: string;
   link?: string;
@@ -43,7 +42,6 @@ export interface DataItem {
 
 export interface DataGroup {
   name: string;
-  // icon: React.FunctionComponent<IconProps>;
   color: string;
   items: DataItem[];
 }
@@ -51,8 +49,8 @@ export interface DataGroup {
 /**
  * Данные лимитов
  *
- * - [Иконки](https://vkcom.github.io/icons/)
- * - [Цвета](https://github.com/VKCOM/VKUI/blob/master/src/styles/bright_light.css)
+ * - [Иконки](https://sveltevk.github.io/icons/)
+ * - [Цвета](https://github.com/sveltevk/VKUI/blob/master/src/styles/bright_light.css)
  */
 export const data: DataGroup[] = [
   {
