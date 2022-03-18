@@ -13,4 +13,5 @@ export default defineConfig({
   optimizeDeps: {
     include: ['svg-baker-runtime/browser-sprite.js', 'svg-baker-runtime/browser-symbol.js']
   },
+  base: './',
 })

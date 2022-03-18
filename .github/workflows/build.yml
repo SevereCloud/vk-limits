@@ -14,9 +14,9 @@ jobs:
           persist-credentials: false
 
       - name: Setup Node
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v2
         with:
-          node-version: '12.x'
+          node-version: '16'
 
       - name: Install 🔆
         run: |
@@ -24,7 +24,7 @@ jobs:
 
       - name: Build 🔧
         run: |
-          npm run build -- --base=/vk-limits/
+          npm run build
 
       - name: Deploy 🚀
         uses: peaceiris/actions-gh-pages@v3
