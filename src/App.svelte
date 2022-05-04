@@ -66,23 +66,6 @@
       {/if}
     </svelte:fragment>
 
-    {#if isDesktop}
-      <SplitCol fixed maxWidth="280px" width="280px">
-        <Panel>
-          {#if $platform !== VKCOM}
-            <PanelHeader />
-          {/if}
-          <Group>
-            {#each data as group}
-              <SimpleCell href={`#${group.name}`}>
-                {group.name}
-              </SimpleCell>
-            {/each}
-          </Group>
-        </Panel>
-      </SplitCol>
-    {/if}
-
     <SplitCol
       spaced={isDesktop}
       animate={!isDesktop}
@@ -118,6 +101,23 @@
         >
       </Panel>
     </SplitCol>
+
+    {#if isDesktop}
+      <SplitCol fixed maxWidth="280px" width="280px">
+        <Panel>
+          {#if $platform !== VKCOM}
+            <PanelHeader />
+          {/if}
+          <Group>
+            {#each data as group}
+              <SimpleCell href={`#${group.name}`}>
+                {group.name}
+              </SimpleCell>
+            {/each}
+          </Group>
+        </Panel>
+      </SplitCol>
+    {/if}
   </SplitLayout>
 </AppRoot>
 

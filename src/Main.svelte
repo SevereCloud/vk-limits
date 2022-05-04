@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { ConfigProvider, VKCOM, Platform } from '@sveltevk/vksui';
 	import { onMount } from 'svelte';
+
+	import { ConfigProvider, VKCOM, Platform } from '@sveltevk/vksui';
+	import '@sveltevk/vksui/styles/themes';
 	import bridge, {type AppearanceSchemeType} from '@vkontakte/vk-bridge';
+
 	import App from './App.svelte';
-  import './app.css'
 
 	let platform: Platform | undefined = undefined;
 	let scheme: AppearanceSchemeType = 'bright_light';

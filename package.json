@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@sveltevk/icons": "^1.145.2",
-    "@sveltevk/vksui": "^0.0.3",
+    "@sveltevk/vksui": "^0.0.5",
     "@vkontakte/vk-bridge": "^2.5.3"
   }
 }
