@@ -139,7 +139,8 @@ export const data: DataGroup[] = [
         text: 'до 7 000 человек',
       },
       {
-        name: 'Полезная нагрузка в сообщений «Payload»',
+        name: 'Полезная нагрузка «Payload»',
+        hint: 'к сообщению',
         icon: Icon28SettingsOutline,
         text: 'примерно до 1024 байт',
       },
