@@ -30,6 +30,7 @@ import {
   Icon28DownloadOutline,
   Icon28SearchOutline,
   Icon28Search,
+  Icon28SettingsOutline,
 } from '@sveltevk/icons';
 
 export interface DataItem {
