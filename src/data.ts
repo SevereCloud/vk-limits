@@ -130,13 +130,18 @@ export const data: DataGroup[] = [
         name: 'Число участников',
         hint: '(обычный чат)',
         icon: Icon28UsersOutline,
-        text: 'до 500 человек',
+        text: 'до 1 000 человек',
       },
       {
         name: 'Число участников',
         hint: '(чат сообщества)',
         icon: Icon28Users3Outline,
-        text: 'до 3 000 человек',
+        text: 'до 7 000 человек',
+      },
+      {
+        name: 'Полезная нагрузка в сообщений «Payload»',
+        icon: Icon28SettingsOutline,
+        text: 'примерно до 1024 байт',
       },
       {
         name: 'Длина сообщения',
