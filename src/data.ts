@@ -31,6 +31,8 @@ import {
   Icon28SearchOutline,
   Icon28Search,
   Icon28SettingsOutline,
+  Icon28ArticlesOutline,
+  Icon28ClockOutline,
 } from '@sveltevk/icons';
 
 export interface DataItem {
@@ -260,6 +262,24 @@ export const data: DataGroup[] = [
         icon: Icon28MusicOutline,
         text: 'AAC',
         link: 'https://vk.com/dev/upload_files_3',
+      },
+    ],
+  },
+  {
+    name: 'Посты',
+    color: 'var(--dynamic_gray)',
+    items: [
+      {
+        name: 'Публикации',
+        icon: Icon28ArticlesOutline,
+        text: '500 в сутки',
+        link: 'https://vk.com/wall-59800369_175307',
+      },
+      {
+        name: 'Отложенные записи',
+        icon: Icon28ClockOutline,
+        text: '250 в сутки (1500 всего)',
+        link: 'https://vk.com/wall-59800369_175307',
       },
     ],
   },
