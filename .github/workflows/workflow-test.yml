@@ -1,0 +1,30 @@
+on:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "yarn"
+
+      - name: Install 🔆
+        run: |
+          yarn install
+
+      - name: Lint 🔧
+        run: |
+          yarn run lint
+
+      - name: Test 🔧
+        run: |
+          yarn run test
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3

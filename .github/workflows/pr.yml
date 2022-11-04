@@ -1,0 +1,11 @@
+name: Pull request
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    uses: ./.github/workflows/workflow-test.yml
+
+  build:
+    uses: ./.github/workflows/workflow-build.yml
