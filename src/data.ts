@@ -33,6 +33,8 @@ import {
   Icon28SettingsOutline,
   Icon28ArticlesOutline,
   Icon28ClockOutline,
+  Icon28SongOutline,
+  Icon28PictureOutline,
 } from '@sveltevk/icons';
 
 export interface DataItem {
@@ -117,7 +119,11 @@ export const data: DataGroup[] = [
         icon: Icon28LikeOutline,
         text: '500 в сутки',
       },
-
+      {
+        name: 'Аудиозаписи',
+        icon: Icon28SongOutline,
+        text: 'до 10 000 аудиозаписей',
+      },
       {
         name: 'Реклама',
         icon: Icon28AdvertisingOutline,
@@ -212,6 +218,12 @@ export const data: DataGroup[] = [
         icon: Icon28PictureStackOutline,
         text: 'до 10 000 фотографий',
         link: 'https://vk.com/faq8209',
+      },
+      {
+        name: 'Общее количество',
+        hint: 'на странице пользователя',
+        icon: Icon28PictureOutline,
+        text: 'до 1 000 000 фотографий',
       },
       {
         name: 'Отметки',
