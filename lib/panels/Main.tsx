@@ -88,7 +88,7 @@ export function Main({ ...restProps }: MainProps) {
 
       <Footer>
         <Link
-          href="https://github.com/SevereCloud/vk-limits/edit/master/data.ts"
+          href="https://github.com/SevereCloud/vk-limits/edit/main/data.ts"
           target="_blank"
         >
           Редактировать
