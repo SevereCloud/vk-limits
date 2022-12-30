@@ -1063,10 +1063,10 @@
   resolved "https://registry.yarnpkg.com/@vkontakte/vkjs/-/vkjs-0.29.0.tgz#b5fe58798217f1da8ff8b2926c46f42232a679d0"
   integrity sha512-JuiLR9bGtpwpVSkKdTNFwPQLKVfL3EgfvuLCjIOC2DkIZsbUESysLPvbC8n1s+vuhBGYWaRsJfZ/33ltGDUBOQ==
 
-"@vkontakte/vkui@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.0.2.tgz#d26acad4190a1e835cc565920e886503d962eb5e"
-  integrity sha512-viU84G03Hxwoax+qXd26DWnelnxv40epC5ppj2328c97ObFT9I/eGV7agdFUG4wPz7yXBGa568JCso+PGFbn7g==
+"@vkontakte/vkui@^5.0.3":
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.0.3.tgz#56ac513dab6d09a0deb4dcd7451f0061a48b905c"
+  integrity sha512-PAg2qI3K9RImMVj5wYEqobdUvSnMYLD7kNc15uwIqaxG15SoNcOW7XEUjuGUJKgaF1RV08kclDmDx/UVFR31bw==
   dependencies:
     "@babel/runtime" "^7.14.6"
     "@popperjs/core" "^2.9.2"
