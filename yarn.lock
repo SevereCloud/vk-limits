@@ -1082,10 +1082,10 @@
     "@typescript-eslint/types" "5.51.0"
     eslint-visitor-keys "^3.3.0"
 
-"@vkontakte/icons@^2.15.0":
-  version "2.15.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.15.0.tgz#8a1ab8f0e6612133e6e0f70dd6afa8e0570444b5"
-  integrity sha512-FFrxy6paeanox3DjO4r/5aSi6JGT4x2i0IJXPM5VYO45qBU296ooFi+lI13Aa6JzPFDgr0lFGMZCYEyApM3uqA==
+"@vkontakte/icons@^2.16.0":
+  version "2.16.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.16.0.tgz#79063876dd4ef25c4a0fa4ab5507576fc81c4d60"
+  integrity sha512-nQjr+7seOSVA6pjYVqrkIQf7pOgSE+3Ae7yXplCMqwqKsq4HQ/uo+wB/WZWLnIvkzpNmeytqQPSG/i8ZdaQm4w==
   dependencies:
     svg-baker-runtime "1.4.7"
 
