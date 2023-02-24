@@ -1099,10 +1099,10 @@
   resolved "https://registry.yarnpkg.com/@vkontakte/vkjs/-/vkjs-0.31.0.tgz#7fe6ac779fc231a5207f3914ab4141e962e6425c"
   integrity sha512-LPfB++/mpywsAYUvNUUfKFWRFgCV8ORtDBphs7WTb1MH0Rq9iaLpStLUMmH5Hl2MMQUxGUIQ2J/grbWVv5BIfA==
 
-"@vkontakte/vkui@^5.2.0":
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.2.0.tgz#12c6a6dca4889432239f9cdc81be6826c5d1d6c5"
-  integrity sha512-oo407yLebeKbet+KrWzPWW2LFa7OVEEtFwJBqIjhHHV0+UnXsaZGMnxEvnAYbZ0EQcu4U6ZQI277ExEnfeomow==
+"@vkontakte/vkui@^5.2.1":
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.2.1.tgz#9a58da224ae4d2507dbf02a3dc0391d518001f91"
+  integrity sha512-ny98nMNm1iLqNhJatZ8vXEXToNpOyIucQYqgM80HAK1UbHUrA5nfacvTUKasb10G52VmYBYmTEaBC0YFRvsAhg==
   dependencies:
     "@babel/runtime" "7.20.13"
     "@floating-ui/react-dom" "1.3.0"
