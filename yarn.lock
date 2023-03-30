@@ -1106,13 +1106,12 @@
   dependencies:
     "@swc/helpers" "^0.4.14"
 
-"@vkontakte/icons@^2.23.0":
-  version "2.23.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.23.0.tgz#7791520a107fa7caff6267bfe47eb7aa140d3d0b"
-  integrity sha512-zcKx0SMai3TtiE7gtbzJOh1SppCjPUcqNe4imw1p1GzzSGD9KLLfuKzA8rRkBHN48Y6tjYINEy433j2OrYNTXA==
+"@vkontakte/icons@^2.24.0":
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.24.0.tgz#6103df28adbd3e95562cc60d60803e721ad93532"
+  integrity sha512-mOw5tSzzLUg7U5Sh4GLmvrdt+0GT51C18rnKyEtMBHYGTQ4QQu9qBgcPDtSe+4dbRPaHKXxzLOfDbSiWnkqFww==
   dependencies:
     "@vkontakte/icons-sprite" "^1.0.1"
-    typescript "^5.0.2"
 
 "@vkontakte/vk-bridge@^2.7.2":
   version "2.7.2"
@@ -5105,7 +5104,7 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
-typescript@5.0.2, typescript@^5.0.2:
+typescript@5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.0.2.tgz#891e1a90c5189d8506af64b9ef929fca99ba1ee5"
   integrity sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==
