@@ -1,6 +1,6 @@
 import type { AppProps } from "next/app";
 import { AdaptivityProvider, AppRoot, ConfigProvider } from "@vkontakte/vkui";
-import "@vkontakte/vkui/dist/vkui.css";
+import "@vkontakte/vkui/dist/cssm/styles/themes.css";
 
 import bridge from "@vkontakte/vk-bridge";
 import React from "react";

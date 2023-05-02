@@ -8,6 +8,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  transpilePackages: ["@vkontakte/vkui"],
+  modularizeImports: {
+    "@vkontakte/vkui": {
+      transform: "@vkontakte/vkui/dist/cssm",
+      skipDefaultConversion: true,
+    },
+  },
 };
 
 module.exports = nextConfig;
