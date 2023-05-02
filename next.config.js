@@ -15,6 +15,7 @@ const nextConfig = {
       skipDefaultConversion: true,
     },
   },
+  output: "export",
 };
 
 module.exports = nextConfig;
