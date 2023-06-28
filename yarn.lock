@@ -1086,10 +1086,10 @@
   dependencies:
     "@swc/helpers" "^0.5.0"
 
-"@vkontakte/icons@^2.44.0":
-  version "2.44.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.44.0.tgz#8ca411da63b9fc38c835154ab7862f02a70f5640"
-  integrity sha512-wvwlXZmI/rjXnEo2ZBXqTUutyytXbdN9hOlLe/4c92liqLGR4/BOk0PcHAwaEu6We471xzPfMnWFGikBQyg16g==
+"@vkontakte/icons@^2.45.0":
+  version "2.45.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/icons/-/icons-2.45.0.tgz#bf805034b9163657d176159f0ff117f94b3d8090"
+  integrity sha512-/ms0p/6yjVqSwd+9PUnyGtgQthtQpxVNa9Z3Dgxim28wcBW7jNyzdVK3a1Q4tBN99rTs0iKhzfW7DTzBBDro2w==
   dependencies:
     "@vkontakte/icons-sprite" "^1.1.1"
 
