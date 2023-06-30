@@ -37,7 +37,7 @@
     "stylelint": "^15.9.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^33.0.0",
-    "ts-jest": "^29.1.0",
+    "ts-jest": "^29.1.1",
     "typescript": "5.1.6"
   },
   "lint-staged": {
