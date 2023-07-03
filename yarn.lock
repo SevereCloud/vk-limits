@@ -1098,23 +1098,23 @@
   resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.8.2.tgz#ec57ef6830a181914678f00ab6c2a037478a9d37"
   integrity sha512-RG7G1CHmTMcNvltNEOLGMGQUjloZLWftSjnuCih8dPgOakKM77EMDHwT1zOqXJp1Z3sZiJXty5L73Y9eDMSDcA==
 
-"@vkontakte/vkjs@^0.32.3":
-  version "0.32.3"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vkjs/-/vkjs-0.32.3.tgz#1568117a5670214f1467a1d5384a1ddf84a6ad20"
-  integrity sha512-nV3CJ87MHRyKwrdCw1RCvHfeQmLTjlZVpuC/GNTahMivwuYIP4lHmTHeqcmFQ/9eEZc4h+ckt7PjlTkhxwRelg==
+"@vkontakte/vkjs@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkjs/-/vkjs-1.1.0.tgz#7bb12ae0f2e9b4a4a7482709bd71c1a223aff4ed"
+  integrity sha512-cBhngz1x4lwctQJMgXrmCsgbmA7DsLlRASlCKJtDf65BU3pqybW+GIyCSDOYKqGQOk4c8n5MgA3uTCHUWufSdw==
   dependencies:
     "@swc/helpers" "^0.5.0"
 
-"@vkontakte/vkui@^5.5.4":
-  version "5.5.4"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.5.4.tgz#16ed88f45278e2cea667c33caa7050166bfbcd37"
-  integrity sha512-JJpNthrJI3GimESm5wtjx3yi4M06IE3ELy6K6TKECEgC12MgVFvQT1zsiClmVjVaZGKj6suzf9cz+oKSd0ZxBQ==
+"@vkontakte/vkui@^5.5.5":
+  version "5.5.5"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.5.5.tgz#c3b052622d647fbdd3e44a0bf87f81c3726eaeec"
+  integrity sha512-Vr1bxxgsLI/zTFAOdJ8V3DyeJRwQ4Hz2Gq5QXHQb3m6daQrPXUYNkTcQc7pNKartETkI/KpM4xJWZoHjj+6d8w==
   dependencies:
     "@floating-ui/react-dom" "^2.0.1"
     "@swc/helpers" "^0.5.1"
-    "@vkontakte/vkjs" "^0.32.3"
-    dayjs "1.11.8"
-    mitt "3.0.0"
+    "@vkontakte/vkjs" "^1.1.0"
+    dayjs "^1.11.8"
+    mitt "^3.0.0"
 
 abab@^2.0.6:
   version "2.0.6"
@@ -1735,10 +1735,10 @@ data-urls@^3.0.2:
     whatwg-mimetype "^3.0.0"
     whatwg-url "^11.0.0"
 
-dayjs@1.11.8:
-  version "1.11.8"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.8.tgz#4282f139c8c19dd6d0c7bd571e30c2d0ba7698ea"
-  integrity sha512-LcgxzFoWMEPO7ggRv1Y2N31hUf2R0Vj7fuy/m+Bg1K8rr+KAs1AEy4y9jd5DXe8pbHgX+srkHNS7TH6Q6ZhYeQ==
+dayjs@^1.11.8:
+  version "1.11.9"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.9.tgz#9ca491933fadd0a60a2c19f6c237c03517d71d1a"
+  integrity sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==
 
 debug@4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
@@ -3834,7 +3834,7 @@ minimist@^1.2.0, minimist@^1.2.6:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
 
-mitt@3.0.0:
+mitt@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/mitt/-/mitt-3.0.0.tgz#69ef9bd5c80ff6f57473e8d89326d01c414be0bd"
   integrity sha512-7dX2/10ITVyqh4aOSVI9gdape+t9l2/8QxHrFmUXu4EEUpdlxl6RudZUPZoc+zuY2hk1j7XxVroIVIan/pD/SQ==
