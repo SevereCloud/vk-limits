@@ -11,7 +11,7 @@
     "pre-commit": "lint-staged"
   },
   "dependencies": {
-    "@vkontakte/icons": "^2.49.0",
+    "@vkontakte/icons": "^2.50.0",
     "@vkontakte/vk-bridge": "^2.8.3",
     "@vkontakte/vkui": "^5.6.1",
     "next": "13.4.10",
