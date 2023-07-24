@@ -14,7 +14,7 @@
     "@vkontakte/icons": "^2.50.0",
     "@vkontakte/vk-bridge": "^2.8.3",
     "@vkontakte/vkui": "^5.6.2",
-    "next": "13.4.11",
+    "next": "13.4.12",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "ts-node": "^10.9.1"
