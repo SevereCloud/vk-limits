@@ -1101,10 +1101,10 @@
   dependencies:
     "@swc/helpers" "^0.5.0"
 
-"@vkontakte/vkui@^5.7.1":
-  version "5.7.1"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.7.1.tgz#e89871ee82f0993906357019156c7a3dee8b8b49"
-  integrity sha512-r9Lakcm/hnBj7n9kna9JouRtrtLthx84cNZin00P/nvUZqakZQIWs0/QXtrf5wrrsJjs37NHCJzGMB0zXXjuJw==
+"@vkontakte/vkui@^5.7.2":
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.7.2.tgz#06865941d9f7b0e6bf41936aaa4206eb6cfc5a0e"
+  integrity sha512-cxNdcEvIj/gKc+A9en79QkGMUVALOltkuLo3Rw8KQ86FCTsCi4l1h8FqYfiqB4/tJz7oKdAJPHOh/pcNj45QYA==
   dependencies:
     "@floating-ui/react-dom" "^2.0.1"
     "@swc/helpers" "^0.5.1"
