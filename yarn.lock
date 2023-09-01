@@ -1067,10 +1067,10 @@
   dependencies:
     "@vkontakte/icons-sprite" "2.0.0"
 
-"@vkontakte/vk-bridge@^2.11.0":
-  version "2.11.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.11.0.tgz#7eeaafac05a58c4ac006bf72d92ddc530a864605"
-  integrity sha512-chtrQblQZogucEynRtD/4N4tn2nLkyWZHHLerhHX4I6i4EgbgHBlEItrCrPY8s4k+JGsAp2qWKHODmgG4XSrYw==
+"@vkontakte/vk-bridge@^2.11.1":
+  version "2.11.1"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.11.1.tgz#28cdb8d25fe3f0f81f6620bdf08f6a235573091f"
+  integrity sha512-GOtL/u4ju1PLJW+GqFUulS5zmmhu1o0AG2Y0HTx4a07Wbpdp7XvGsOjp/xkOILjFVDSZtNQJ64ud6xwei3q+Iw==
 
 "@vkontakte/vkjs@^1.1.0":
   version "1.1.0"
