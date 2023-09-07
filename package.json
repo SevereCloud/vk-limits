@@ -13,7 +13,7 @@
   "dependencies": {
     "@vkontakte/icons": "^2.63.0",
     "@vkontakte/vk-bridge": "^2.11.1",
-    "@vkontakte/vkui": "^5.7.2",
+    "@vkontakte/vkui": "^5.8.0",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
