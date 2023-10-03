@@ -805,7 +805,7 @@
   dependencies:
     "@sinonjs/commons" "^2.0.0"
 
-"@swc/helpers@0.5.2", "@swc/helpers@^0.5.0", "@swc/helpers@^0.5.1":
+"@swc/helpers@0.5.2", "@swc/helpers@^0.5.0", "@swc/helpers@^0.5.1", "@swc/helpers@^0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.5.2.tgz#85ea0c76450b61ad7d10a37050289eded783c27d"
   integrity sha512-E4KcWTpoLHqwPHLxidpOqQbcrZVgi0rsmmZXUle1jXmJfuIf/UWpczUJ7MZZ5tlxytgJXyp0w4PGkkeLiuIdZw==
@@ -1086,16 +1086,16 @@
   dependencies:
     "@swc/helpers" "^0.5.0"
 
-"@vkontakte/vkui@^5.8.2":
-  version "5.8.2"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.8.2.tgz#9cfb27007a08abed6168c30043a166429f238fe7"
-  integrity sha512-IRU7UHxZXfNQ4nMiAbNic64yEZ+zBAiUvRlliT/vw5oYA4rvxpnNhKWsqMGA/jdY2bJtP5jM1D/MGH/i8XOmMQ==
+"@vkontakte/vkui@^5.9.0":
+  version "5.9.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-5.9.0.tgz#cacb74fb8859a2a0e48acb829f27afad8686a1da"
+  integrity sha512-NiLGU4yOvDXleKXzvsNqgWT9byblRrvwj2nM9bOPG0VbQRwDJmdMf0E7x8DelS//PpLB29+J1uV8bxXaMQCpyA==
   dependencies:
     "@floating-ui/react-dom" "^2.0.2"
-    "@swc/helpers" "^0.5.1"
+    "@swc/helpers" "^0.5.2"
     "@vkontakte/icons" "^2.62.0"
     "@vkontakte/vkjs" "^1.1.0"
-    dayjs "^1.11.9"
+    dayjs "^1.11.10"
     mitt "^3.0.1"
 
 abab@^2.0.6:
@@ -1779,10 +1779,10 @@ data-urls@^3.0.2:
     whatwg-mimetype "^3.0.0"
     whatwg-url "^11.0.0"
 
-dayjs@^1.11.9:
-  version "1.11.9"
-  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.9.tgz#9ca491933fadd0a60a2c19f6c237c03517d71d1a"
-  integrity sha512-QvzAURSbQ0pKdIye2txOzNaHmxtUBXerpY0FJsFXUMKbIZeFm5ht1LS/jFsrncjnmtv8HsG0W2g6c0zUjZWmpA==
+dayjs@^1.11.10:
+  version "1.11.10"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.11.10.tgz#68acea85317a6e164457d6d6947564029a6a16a0"
+  integrity sha512-vjAczensTgRcqDERK0SR2XMwsF/tSvnvlv6VcF2GIhg6Sx4yOIt/irsr1RDJsKiIyBzJDpCoXiWWq28MqH2cnQ==
 
 debug@4, debug@4.3.4, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2, debug@^4.3.4:
   version "4.3.4"
