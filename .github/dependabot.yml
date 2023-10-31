@@ -3,9 +3,25 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
     allow:
       - dependency-type: 'direct'
+    groups:
+      next:
+        patterns:
+          - 'next'
+          - 'eslint-config-next'
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@types/react'
+          - '@types/react-dom'
+      jest:
+        patterns:
+          - 'jest*'
+          - '@types/jest*'
+          - '@swc/jest'
 
   - package-ecosystem: 'github-actions'
     # Workflow files stored in the
