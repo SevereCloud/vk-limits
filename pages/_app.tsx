@@ -16,7 +16,7 @@ import {
 import "@vkontakte/vkui/dist/cssm/styles/themes.css";
 
 import React from "react";
-import { transformVKBridgeAdaptivity } from "./transformVKBridgeAdaptivity";
+import { transformVKBridgeAdaptivity } from "../lib/helpers/transformVKBridgeAdaptivity";
 
 export default function App({ Component, pageProps }: AppProps) {
   const vkBridgeAppearance = useAppearance() || Appearance.LIGHT; // Вместо undefined можно задать значение по умолчанию
