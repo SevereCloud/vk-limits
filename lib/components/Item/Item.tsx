@@ -14,6 +14,7 @@ export function Item({ Icon, name, hint, text, link, fill }: ItemProps) {
       subtitle={text}
       href={link}
       target="_blank"
+      expandable={link ? "always" : undefined}
     >
       {name}
       {hint && <span className={styles.hint}>{" " + hint}</span>}
