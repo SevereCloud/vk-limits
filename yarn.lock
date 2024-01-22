@@ -1106,10 +1106,10 @@
     "@floating-ui/react-dom" "^2.0.4"
     "@swc/helpers" "^0.5.3"
 
-"@vkontakte/vkui@^6.0.0-beta.3":
-  version "6.0.0-beta.3"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-6.0.0-beta.3.tgz#1507cd164810a4e88bc438f87f6b499de73c4fb7"
-  integrity sha512-qpcRMtT46kq083xamoS/acwDmhjTOzToqW0SD/cCTAdduH6w7mQtNp4Treh0knIG8U6HCHy2ijswOfzI/Ry+hg==
+"@vkontakte/vkui@^6.0.0":
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vkui/-/vkui-6.0.0.tgz#0bcc97823cfd89c2c79b58289d59ed4f5dc09daf"
+  integrity sha512-KnbLCumeOhG1MXz9N3WyCht9ClRakTFvrw+vIQXrJAH52mYOyfBsQXQ4ePlEiOHolS1XyWe2cLtJkbf2f7XoPg==
   dependencies:
     "@swc/helpers" "^0.5.3"
     "@vkontakte/icons" "^2.62.0"
