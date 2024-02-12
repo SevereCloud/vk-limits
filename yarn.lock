@@ -1086,10 +1086,10 @@
   resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge-react/-/vk-bridge-react-1.0.1.tgz#27b68d4cdb6136f34573b7c4fcea48f9be565171"
   integrity sha512-+r0zxh1UUDcok2VtsPDc6jWHQezfsqHK3M9LAnTpKI9XyZlrgfEQA8cYsc0F8urOXUJ3FhEHXuJQjQGgK0Z5PA==
 
-"@vkontakte/vk-bridge@^2.13.0":
-  version "2.13.0"
-  resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.13.0.tgz#ea1085e0274b4d7955768a04ada0dbba91f51950"
-  integrity sha512-fACaGwJ1RUXR7E6EVZhQyR5fmfQdoiAALOl7S+1lpwd9j2omqRyOC/p4zxZPFiufBGF3GH9dF9TdNbTpXMB2/A==
+"@vkontakte/vk-bridge@^2.14.1":
+  version "2.14.1"
+  resolved "https://registry.yarnpkg.com/@vkontakte/vk-bridge/-/vk-bridge-2.14.1.tgz#5966d9e2837570d7aed78d654bfda4ba83695c54"
+  integrity sha512-ygUkWmAj1Yca1y6OKcFRhZjM2jJ8dlD/YM0hbz86iXc3Xrd8fc1aKGAOLmgPsXkqBR3mWMxA7PoNdlVLB97Qpg==
 
 "@vkontakte/vkjs@^1.1.1":
   version "1.1.1"
