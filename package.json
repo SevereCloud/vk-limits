@@ -14,7 +14,7 @@
     "@vkontakte/icons": "^2",
     "@vkontakte/vk-bridge": "^2",
     "@vkontakte/vk-bridge-react": "^1",
-    "@vkontakte/vkui": "^6",
+    "@vkontakte/vkui": "^7.0.0-beta.0",
     "next": "^14",
     "react": "^18",
     "react-dom": "^18",
