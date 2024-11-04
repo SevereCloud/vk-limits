@@ -15,7 +15,7 @@
     "@vkontakte/vk-bridge": "^2",
     "@vkontakte/vk-bridge-react": "^1",
     "@vkontakte/vkui": "^7.0.0-beta.0",
-    "next": "^14",
+    "next": "^15",
     "react": "^18",
     "react-dom": "^18",
     "ts-node": "^10"
@@ -27,7 +27,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "^14",
+    "eslint-config-next": "^15",
     "eslint-config-prettier": "^9",
     "eslint-plugin-prettier": "^5",
     "husky": "^9",
