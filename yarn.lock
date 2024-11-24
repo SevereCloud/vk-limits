@@ -1585,9 +1585,9 @@ __metadata:
   linkType: hard
 
 "@vkontakte/vk-bridge@npm:^2":
-  version: 2.15.1
-  resolution: "@vkontakte/vk-bridge@npm:2.15.1"
-  checksum: 10c0/741a749ae1fa195321b5c9227f3e009182445c3fddccb5f0d78bbff31e1936369846ad492aff8ec477d562eec6c70e9369383cd674b999ef91443bf9bb321431
+  version: 2.15.3
+  resolution: "@vkontakte/vk-bridge@npm:2.15.3"
+  checksum: 10c0/7766f31290ba4a902bda80d634e489dfe36f8e9352bba5d05ced3d51ee0de9af963c5596024baf25dc0ac74dbdaaf0149785e0104c7fe06c254adcd2a3b445ef
   languageName: node
   linkType: hard
 
