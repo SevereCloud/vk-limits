@@ -8,15 +8,8 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "yarn"
-
-      - name: Install 🔆
-        run: |
-          yarn install
+      - name: Node setup
+        uses: ./.github/actions/node-setup
 
       - name: Lint 🔧
         run: |

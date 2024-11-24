@@ -1,0 +1,22 @@
+diff --git a/package.json b/package.json
+index 5f3a141cfd254e8fb71968f6fee83c46469f9e63..9028a5eab0f18b7b4d475f1812baa054e825bff1 100644
+--- a/package.json
++++ b/package.json
+@@ -7,13 +7,15 @@
+   "exports": {
+     ".": {
+       "types": "./dist/index.d.ts",
+-      "import": "./dist/index.js"
++      "import": "./dist/index.js",
++      "default": "./dist/cssm/index.js"
+     },
+     "./dist/vkui.css": "./dist/vkui.css",
+     "./dist/components.css": "./dist/components.css",
+     "./dist/cssm": {
+       "types": "./dist/index.d.ts",
+-      "import": "./dist/cssm/index.js"
++      "import": "./dist/cssm/index.js",
++      "default": "./dist/cssm/index.js"
+     },
+     "./dist/cssm/styles/themes.css": "./dist/cssm/styles/themes.css"
+   },

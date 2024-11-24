@@ -14,7 +14,7 @@
     "@vkontakte/icons": "^2",
     "@vkontakte/vk-bridge": "^2",
     "@vkontakte/vk-bridge-react": "^1",
-    "@vkontakte/vkui": "^7.0.0-beta.0",
+    "@vkontakte/vkui": "patch:@vkontakte/vkui@npm%3A7.0.0-beta.0#~/.yarn/patches/@vkontakte-vkui-npm-7.0.0-beta.0-34006ec2f3.patch",
     "next": "^14",
     "react": "^18",
     "react-dom": "^18",
@@ -54,5 +54,5 @@
       "prettier --check"
     ]
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+  "packageManager": "yarn@4.5.2"
 }
