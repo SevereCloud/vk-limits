@@ -1559,25 +1559,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vkontakte/icons@npm:^2":
-  version: 2.147.0
-  resolution: "@vkontakte/icons@npm:2.147.0"
+"@vkontakte/icons@npm:^2, @vkontakte/icons@npm:^2.115.0":
+  version: 2.155.0
+  resolution: "@vkontakte/icons@npm:2.155.0"
   dependencies:
     "@vkontakte/icons-sprite": "npm:2.3.0"
   peerDependencies:
     react: ^16.9.34 || ^17 || ^18
-  checksum: 10c0/cd78b0f88bd744e419e07dd25340b07145006c73e7a3f5e57d396455512407820b56ce744817c5addf633474f29bb9d4482eb7f85d82f747aedc7a83d709ca4e
-  languageName: node
-  linkType: hard
-
-"@vkontakte/icons@npm:^2.115.0":
-  version: 2.144.0
-  resolution: "@vkontakte/icons@npm:2.144.0"
-  dependencies:
-    "@vkontakte/icons-sprite": "npm:2.3.0"
-  peerDependencies:
-    react: ^16.9.34 || ^17 || ^18
-  checksum: 10c0/b504afee5bbdce45e1988741e9004de052a2309d94500b12136fb2bd807111a7bbd5c68d7a8ec05116141b831d3d81f3c7e3886831f27a876428d3668d260126
+  checksum: 10c0/6f41f4462c40295832fa0d6b7a471f80c0aef51a7f3b112591751ab35ad6e5803225974139be16900835958c152fc14964448db89b710e2f67f34f8ab9c5a469
   languageName: node
   linkType: hard
 
