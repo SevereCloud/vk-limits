@@ -1327,12 +1327,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/helpers@npm:0.5.13, @swc/helpers@npm:^0.5.0, @swc/helpers@npm:^0.5.12, @swc/helpers@npm:^0.5.13":
+"@swc/helpers@npm:0.5.13, @swc/helpers@npm:^0.5.0, @swc/helpers@npm:^0.5.13":
   version: 0.5.13
   resolution: "@swc/helpers@npm:0.5.13"
   dependencies:
     tslib: "npm:^2.4.0"
   checksum: 10c0/b9df578401fc62405da9a6c31e79e447a2fd90f68b25b1daee12f2caf2821991bb89106f0397bc1acb4c4d84a8ce079d04b60b65f534496952e3bf8c9a52f40f
+  languageName: node
+  linkType: hard
+
+"@swc/helpers@npm:^0.5.15":
+  version: 0.5.15
+  resolution: "@swc/helpers@npm:0.5.15"
+  dependencies:
+    tslib: "npm:^2.8.0"
+  checksum: 10c0/33002f74f6f885f04c132960835fdfc474186983ea567606db62e86acd0680ca82f34647e8e610f4e1e422d1c16fce729dde22cd3b797ab1fd9061a825dabca4
   languageName: node
   linkType: hard
 
@@ -1722,25 +1731,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vkontakte/icons-sprite@npm:2.3.0":
-  version: 2.3.0
-  resolution: "@vkontakte/icons-sprite@npm:2.3.0"
+"@vkontakte/icons-sprite@npm:2.3.1":
+  version: 2.3.1
+  resolution: "@vkontakte/icons-sprite@npm:2.3.1"
   dependencies:
-    "@swc/helpers": "npm:^0.5.12"
+    "@swc/helpers": "npm:^0.5.15"
   peerDependencies:
     react: ^16.9.34 || ^17 || ^18
-  checksum: 10c0/77724787a94248fbfed9cff0c3e045e2af04b0bc3eee6759e8fa8ce9fe1c12d397f00a07c2da3eaaf348c535c4f6c9e167dc25fde26b0603beabf791644c7a0d
+  checksum: 10c0/f6b0669d07410845126f39e7ed55727175668b518cd27308366118a418283516950fa7b853297e4479a43789b6c2de3f2077627a5280a10bceca55991c5b3078
   languageName: node
   linkType: hard
 
 "@vkontakte/icons@npm:^2, @vkontakte/icons@npm:^2.115.0":
-  version: 2.155.0
-  resolution: "@vkontakte/icons@npm:2.155.0"
+  version: 2.159.0
+  resolution: "@vkontakte/icons@npm:2.159.0"
   dependencies:
-    "@vkontakte/icons-sprite": "npm:2.3.0"
+    "@vkontakte/icons-sprite": "npm:2.3.1"
   peerDependencies:
     react: ^16.9.34 || ^17 || ^18
-  checksum: 10c0/6f41f4462c40295832fa0d6b7a471f80c0aef51a7f3b112591751ab35ad6e5803225974139be16900835958c152fc14964448db89b710e2f67f34f8ab9c5a469
+  checksum: 10c0/95b616141babf02aed16ad3f224dc6163a7c6e8adbaeb78832f97e6d9087ad6f2e00d8b4ee51b42b2f074b3b9ad0c3869cf235a53124adddef01aa928a55b39c
   languageName: node
   linkType: hard
 
@@ -8770,6 +8779,13 @@ __metadata:
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 10c0/e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.8.0":
+  version: 2.8.1
+  resolution: "tslib@npm:2.8.1"
+  checksum: 10c0/9c4759110a19c53f992d9aae23aac5ced636e99887b51b9e61def52611732872ff7668757d4e4c61f19691e36f4da981cd9485e869b4a7408d689f6bf1f14e62
   languageName: node
   linkType: hard
 
