@@ -37,7 +37,7 @@
     "prettier": "^3",
     "stylelint": "^15",
     "stylelint-config-prettier": "^9",
-    "stylelint-config-standard": "^34",
+    "stylelint-config-standard": "^37",
     "ts-jest": "^29",
     "typescript": "^5"
   },
